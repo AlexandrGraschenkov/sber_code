@@ -59,14 +59,17 @@ std::vector<Code> Recognizer::recognize(const cv::Mat &frame, ImageFormat format
     vector<Code> result = Code::parseResult(symSet);
     
     // ZXING
+//    Ref<LuminanceSource> imgSource = MatSource::create(grayImg);
+//    Ref<LuminanceSource>(new GreyscaleLuminanceSource(greyData_, dataWidth_, dataHeight_, left, top, width, height))
     ArrayRef<char> dataRef((char *)grayImg.data, grayImg.size().area());
-    Ref<LuminanceSource> imgSource = Ref<LuminanceSource>(new GreyscaleLuminanceSource(dataRef, grayImg.cols, grayImg.rows, 0, 0, 0, 0));
+    Ref<LuminanceSource> imgSource = Ref<LuminanceSource>(new GreyscaleLuminanceSource(dataRef, grayImg.cols, grayImg.rows, 0, 0, grayImg.cols, grayImg.rows));
     Ref<Binarizer> binarizer = Ref<Binarizer>(new HybridBinarizer(imgSource));
-    DecodeHints hints(DecodeHints::DATA_MATRIX_HINT | DecodeHints::AZTEC_HINT);
+    Ref<BinaryBitmap> bitmap = Ref<BinaryBitmap>(new BinaryBitmap(binarizer));
     
     MultiFormatReader delegate;
     multi::GenericMultipleBarcodeReader reader(delegate);
-    Ref<BinaryBitmap> bitmap = Ref<BinaryBitmap>(new BinaryBitmap(binarizer));
+    
+    DecodeHints hints(DecodeHints::DATA_MATRIX_HINT | DecodeHints::AZTEC_HINT);
     vector<Ref<Result>> zxingResults = reader.decodeMultiple(bitmap, hints);
     vector<Code> result2 = Code::parseResult(zxingResults);
     if (result2.size()) {

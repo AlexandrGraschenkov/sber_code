@@ -38,9 +38,9 @@ vector<Ref<Result> > GenericMultipleBarcodeReader::decodeMultiple(Ref<BinaryBitm
                                                                   DecodeHints hints) {
   vector<Ref<Result> > results;
   doDecodeMultiple(image, hints, results, 0, 0, 0);
-  if (results.empty()){
-    throw ReaderException("No code detected");
-  }
+//  if (results.empty()){
+//    throw ReaderException("No code detected");
+//  }
   return results;
 }
 

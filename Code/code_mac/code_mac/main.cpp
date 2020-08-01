@@ -28,7 +28,9 @@ int main(int argc, const char * argv[]) {
     
 //    string imgPath = "/Users/alex/Downloads/sber_code_data/ean-13_0.jpeg";
 //    string imgPath = "/Users/alex/Downloads/sber_code_data/code-128_0.jpeg";
-    string imgPath = "/Users/alex/Downloads/photo_2020-07-31 15.43.35.jpeg";
+//    string imgPath = "/Users/alex/Downloads/photo_2020-07-31 15.43.35.jpeg";
+//string imgPath = "/Users/alex/Downloads/sber_code_data/data_matrix.jpeg";
+string imgPath = "/Users/alex/Downloads/sber_code_data/aztec_2.jpeg";
     
     Mat img = imread(imgPath);
     
