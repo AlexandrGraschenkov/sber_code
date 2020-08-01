@@ -12,7 +12,7 @@
 #include "qrdec.h"
 #include "util.h"
 #include "image.h"
-#include "decoder.h"
+#include "../decoder.h"
 #include "error.h"
 #include "img_scanner.h"
 

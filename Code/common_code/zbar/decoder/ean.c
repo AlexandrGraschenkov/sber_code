@@ -28,7 +28,7 @@
 # define DEBUG_LEVEL (DEBUG_EAN)
 #endif
 #include "debug.h"
-#include "decoder.h"
+#include "../decoder.h"
 
 /* partial decode symbol location */
 typedef enum symbol_partial_e {

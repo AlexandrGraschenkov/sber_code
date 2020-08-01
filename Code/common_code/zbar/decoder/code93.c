@@ -28,7 +28,7 @@
 # define DEBUG_LEVEL (DEBUG_CODE93)
 #endif
 #include "debug.h"
-#include "decoder.h"
+#include "../decoder.h"
 
 static const signed char code93_hash[0x40] = {
     0x0f, 0x2b, 0x30, 0x38, 0x13, 0x1b, 0x11, 0x2a,

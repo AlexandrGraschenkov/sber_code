@@ -30,7 +30,7 @@
 # define DEBUG_LEVEL (DEBUG_CODABAR)
 #endif
 #include "debug.h"
-#include "decoder.h"
+#include "../decoder.h"
 
 #define NIBUF 6 /* initial scan buffer size */
 

@@ -9,8 +9,11 @@
 #include "CodeData.hpp"
 #include <zbar.h>
 #include <opencv2/imgproc.hpp>
+#include <zxing/Result.h>
+#include <zxing/BarcodeFormat.h>
 
 using namespace zbar;
+using namespace zxing;
 using namespace std;
 using namespace cv;
 
@@ -24,6 +27,24 @@ std::vector<Code> Code::parseResult(const zbar_symbol_set_t *recognized) {
     }
     return result;
 };
+
+std::vector<Code> Code::parseResult(const std::vector<zxing::Ref<zxing::Result>> &recognized) {
+    vector<Code> result;
+    for (int i = 0; i < recognized.size(); i++) {
+        Code c;
+        auto format = recognized[i]->getBarcodeFormat();
+        c.typeName = string(BarcodeFormat::barcodeFormatNames[(int)format]);
+        c.message = recognized[i]->getText()->getText();
+        c.quality = 100;
+        
+        for (const auto &recP : recognized[i]->getResultPoints()->values()) {
+            Point p(recP->getX(), recP->getY());
+            c.location.push_back(p);
+        }
+        result.push_back(c);
+    }
+    return result;
+}
 
 
 Code::Code(const zbar::zbar_symbol_t *sym) {

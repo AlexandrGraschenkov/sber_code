@@ -30,7 +30,7 @@
 # define DEBUG_LEVEL (DEBUG_I25)
 #endif
 #include "debug.h"
-#include "decoder.h"
+#include "../decoder.h"
 
 static inline unsigned char i25_decode1 (unsigned char enc,
                                          unsigned e,

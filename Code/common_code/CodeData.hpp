@@ -20,6 +20,11 @@ namespace zbar {
     typedef struct zbar_symbol_set_s zbar_symbol_set_t;
 }; // namespace zbar
 
+namespace zxing {
+    template<typename T> class Ref;
+    class Result;
+}; // namespace zxing
+
 
 namespace SberCode {
 
@@ -37,6 +42,7 @@ struct Code {
     Code(){};
     Code(const zbar::zbar_symbol_t *);
     static std::vector<Code> parseResult(const zbar::zbar_symbol_set_t *);
+    static std::vector<Code> parseResult(const std::vector<zxing::Ref<zxing::Result>> &);
 };
 
 } // namespace SberCode
