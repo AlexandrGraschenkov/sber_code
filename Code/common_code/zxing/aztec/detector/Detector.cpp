@@ -28,6 +28,8 @@
 #include <iostream>
 #include <zxing/common/detector/MathUtils.h>
 #include <zxing/NotFoundException.h>
+//#include <opencv2/highgui.hpp>
+//#include <opencv2/imgproc.hpp>
 
 using std::vector;
 using zxing::aztec::Detector;
@@ -53,10 +55,31 @@ Ref<AztecDetectorResult> Detector::detect() {
             
   std::vector<Ref<Point> > bullEyeCornerPoints = getBullEyeCornerPoints(pCenter);
             
+
+    
   extractParameters(bullEyeCornerPoints);
   
   ArrayRef< Ref<ResultPoint> > corners = getMatrixCornerPoints(bullEyeCornerPoints);
-            
+
+    
+//    cv::Mat img(image_->getHeight(), image_->getWidth(), CV_8UC1);
+//    for (int r = 0; r < image_->getHeight(); r++) {
+//        for (int c = 0; c < image_->getWidth(); c++) {
+//            img.at<uint8_t>(r, c) = image_->get(c, r) ? 0 : 255;
+//        }
+//    }
+//    cv::cvtColor(img, img, cv::COLOR_GRAY2BGR);
+//    for (int i = 0; i < corners->size(); i++) {
+//        int ii = (i + 1) % corners->size();
+//        cv::Point p1(corners[i]->getX(),
+//                     corners[i]->getY());
+//        cv::Point p2(corners[ii]->getX(),
+//                     corners[ii]->getY());
+//        cv::line(img, p1, p2, CV_RGB(255, 0, 0), 3);
+//    }
+//    cv::imshow("debug", img);
+//          cv::waitKey();
+    
   Ref<BitMatrix> bits =
     sampleGrid(image_,
                corners[shift_%4],

@@ -103,11 +103,11 @@
 		FA39FAF824D558FD00EFF7CB /* FormatException.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA39FA9524D558FC00EFF7CB /* FormatException.cpp */; };
 		FA39FAF924D558FD00EFF7CB /* BarcodeFormat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA39FA9924D558FC00EFF7CB /* BarcodeFormat.cpp */; };
 		FA39FB0D24D55E5100EFF7CB /* qrdectxt.c in Sources */ = {isa = PBXBuildFile; fileRef = FA39FB0C24D55E5100EFF7CB /* qrdectxt.c */; };
-		FA39FB1B24D5603000EFF7CB /* BigUnsignedInABase.cc in Sources */ = {isa = PBXBuildFile; fileRef = FA39FB1024D5603000EFF7CB /* BigUnsignedInABase.cc */; };
-		FA39FB1C24D5603000EFF7CB /* BigIntegerAlgorithms.cc in Sources */ = {isa = PBXBuildFile; fileRef = FA39FB1224D5603000EFF7CB /* BigIntegerAlgorithms.cc */; };
-		FA39FB1D24D5603000EFF7CB /* BigUnsigned.cc in Sources */ = {isa = PBXBuildFile; fileRef = FA39FB1724D5603000EFF7CB /* BigUnsigned.cc */; };
-		FA39FB1E24D5603000EFF7CB /* BigIntegerUtils.cc in Sources */ = {isa = PBXBuildFile; fileRef = FA39FB1924D5603000EFF7CB /* BigIntegerUtils.cc */; };
-		FA39FB1F24D5603000EFF7CB /* BigInteger.cc in Sources */ = {isa = PBXBuildFile; fileRef = FA39FB1A24D5603000EFF7CB /* BigInteger.cc */; };
+		FA39FD2124D5930000EFF7CB /* BigUnsignedInABase.cc in Sources */ = {isa = PBXBuildFile; fileRef = FA39FD1624D5930000EFF7CB /* BigUnsignedInABase.cc */; };
+		FA39FD2224D5930000EFF7CB /* BigIntegerAlgorithms.cc in Sources */ = {isa = PBXBuildFile; fileRef = FA39FD1824D5930000EFF7CB /* BigIntegerAlgorithms.cc */; };
+		FA39FD2324D5930000EFF7CB /* BigUnsigned.cc in Sources */ = {isa = PBXBuildFile; fileRef = FA39FD1D24D5930000EFF7CB /* BigUnsigned.cc */; };
+		FA39FD2424D5930000EFF7CB /* BigIntegerUtils.cc in Sources */ = {isa = PBXBuildFile; fileRef = FA39FD1F24D5930000EFF7CB /* BigIntegerUtils.cc */; };
+		FA39FD2524D5930000EFF7CB /* BigInteger.cc in Sources */ = {isa = PBXBuildFile; fileRef = FA39FD2024D5930000EFF7CB /* BigInteger.cc */; };
 		FAB14F3C24D407ED00B718DF /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAB14F3B24D407ED00B718DF /* main.cpp */; };
 		FAB14F4524D4084100B718DF /* SberCodeAPI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAB14F4324D4084100B718DF /* SberCodeAPI.cpp */; };
 		FAB14FA124D42A0800B718DF /* CodeData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAB14F9F24D42A0800B718DF /* CodeData.cpp */; };
@@ -347,18 +347,18 @@
 		FA39FA9924D558FC00EFF7CB /* BarcodeFormat.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BarcodeFormat.cpp; sourceTree = "<group>"; };
 		FA39FA9A24D558FC00EFF7CB /* ResultPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultPoint.h; sourceTree = "<group>"; };
 		FA39FB0C24D55E5100EFF7CB /* qrdectxt.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = qrdectxt.c; sourceTree = "<group>"; };
-		FA39FB0F24D5603000EFF7CB /* BigIntegerAlgorithms.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BigIntegerAlgorithms.hh; sourceTree = "<group>"; };
-		FA39FB1024D5603000EFF7CB /* BigUnsignedInABase.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BigUnsignedInABase.cc; sourceTree = "<group>"; };
-		FA39FB1124D5603000EFF7CB /* BigUnsignedInABase.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BigUnsignedInABase.hh; sourceTree = "<group>"; };
-		FA39FB1224D5603000EFF7CB /* BigIntegerAlgorithms.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BigIntegerAlgorithms.cc; sourceTree = "<group>"; };
-		FA39FB1324D5603000EFF7CB /* NumberlikeArray.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = NumberlikeArray.hh; sourceTree = "<group>"; };
-		FA39FB1424D5603000EFF7CB /* BigIntegerUtils.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BigIntegerUtils.hh; sourceTree = "<group>"; };
-		FA39FB1524D5603000EFF7CB /* BigInteger.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BigInteger.hh; sourceTree = "<group>"; };
-		FA39FB1624D5603000EFF7CB /* BigUnsigned.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BigUnsigned.hh; sourceTree = "<group>"; };
-		FA39FB1724D5603000EFF7CB /* BigUnsigned.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BigUnsigned.cc; sourceTree = "<group>"; };
-		FA39FB1824D5603000EFF7CB /* BigIntegerLibrary.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BigIntegerLibrary.hh; sourceTree = "<group>"; };
-		FA39FB1924D5603000EFF7CB /* BigIntegerUtils.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BigIntegerUtils.cc; sourceTree = "<group>"; };
-		FA39FB1A24D5603000EFF7CB /* BigInteger.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BigInteger.cc; sourceTree = "<group>"; };
+		FA39FD1524D5930000EFF7CB /* BigIntegerAlgorithms.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BigIntegerAlgorithms.hh; sourceTree = "<group>"; };
+		FA39FD1624D5930000EFF7CB /* BigUnsignedInABase.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BigUnsignedInABase.cc; sourceTree = "<group>"; };
+		FA39FD1724D5930000EFF7CB /* BigUnsignedInABase.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BigUnsignedInABase.hh; sourceTree = "<group>"; };
+		FA39FD1824D5930000EFF7CB /* BigIntegerAlgorithms.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BigIntegerAlgorithms.cc; sourceTree = "<group>"; };
+		FA39FD1924D5930000EFF7CB /* NumberlikeArray.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = NumberlikeArray.hh; sourceTree = "<group>"; };
+		FA39FD1A24D5930000EFF7CB /* BigIntegerUtils.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BigIntegerUtils.hh; sourceTree = "<group>"; };
+		FA39FD1B24D5930000EFF7CB /* BigInteger.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BigInteger.hh; sourceTree = "<group>"; };
+		FA39FD1C24D5930000EFF7CB /* BigUnsigned.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BigUnsigned.hh; sourceTree = "<group>"; };
+		FA39FD1D24D5930000EFF7CB /* BigUnsigned.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BigUnsigned.cc; sourceTree = "<group>"; };
+		FA39FD1E24D5930000EFF7CB /* BigIntegerLibrary.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BigIntegerLibrary.hh; sourceTree = "<group>"; };
+		FA39FD1F24D5930000EFF7CB /* BigIntegerUtils.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BigIntegerUtils.cc; sourceTree = "<group>"; };
+		FA39FD2024D5930000EFF7CB /* BigInteger.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BigInteger.cc; sourceTree = "<group>"; };
 		FAB14F3824D407ED00B718DF /* code_mac */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = code_mac; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAB14F3B24D407ED00B718DF /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		FAB14F4324D4084100B718DF /* SberCodeAPI.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SberCodeAPI.cpp; sourceTree = "<group>"; };
@@ -804,24 +804,23 @@
 			path = oned;
 			sourceTree = "<group>";
 		};
-		FA39FB0E24D5603000EFF7CB /* bigint */ = {
+		FA39FD1424D5930000EFF7CB /* bigint */ = {
 			isa = PBXGroup;
 			children = (
-				FA39FB0F24D5603000EFF7CB /* BigIntegerAlgorithms.hh */,
-				FA39FB1024D5603000EFF7CB /* BigUnsignedInABase.cc */,
-				FA39FB1124D5603000EFF7CB /* BigUnsignedInABase.hh */,
-				FA39FB1224D5603000EFF7CB /* BigIntegerAlgorithms.cc */,
-				FA39FB1324D5603000EFF7CB /* NumberlikeArray.hh */,
-				FA39FB1424D5603000EFF7CB /* BigIntegerUtils.hh */,
-				FA39FB1524D5603000EFF7CB /* BigInteger.hh */,
-				FA39FB1624D5603000EFF7CB /* BigUnsigned.hh */,
-				FA39FB1724D5603000EFF7CB /* BigUnsigned.cc */,
-				FA39FB1824D5603000EFF7CB /* BigIntegerLibrary.hh */,
-				FA39FB1924D5603000EFF7CB /* BigIntegerUtils.cc */,
-				FA39FB1A24D5603000EFF7CB /* BigInteger.cc */,
+				FA39FD1524D5930000EFF7CB /* BigIntegerAlgorithms.hh */,
+				FA39FD1624D5930000EFF7CB /* BigUnsignedInABase.cc */,
+				FA39FD1724D5930000EFF7CB /* BigUnsignedInABase.hh */,
+				FA39FD1824D5930000EFF7CB /* BigIntegerAlgorithms.cc */,
+				FA39FD1924D5930000EFF7CB /* NumberlikeArray.hh */,
+				FA39FD1A24D5930000EFF7CB /* BigIntegerUtils.hh */,
+				FA39FD1B24D5930000EFF7CB /* BigInteger.hh */,
+				FA39FD1C24D5930000EFF7CB /* BigUnsigned.hh */,
+				FA39FD1D24D5930000EFF7CB /* BigUnsigned.cc */,
+				FA39FD1E24D5930000EFF7CB /* BigIntegerLibrary.hh */,
+				FA39FD1F24D5930000EFF7CB /* BigIntegerUtils.cc */,
+				FA39FD2024D5930000EFF7CB /* BigInteger.cc */,
 			);
-			name = bigint;
-			path = ../../../../../Desktop/bigint;
+			path = bigint;
 			sourceTree = "<group>";
 		};
 		FAB14F2F24D407ED00B718DF = {
@@ -854,7 +853,7 @@
 		FAB14F4224D4082500B718DF /* common_code */ = {
 			isa = PBXGroup;
 			children = (
-				FA39FB0E24D5603000EFF7CB /* bigint */,
+				FA39FD1424D5930000EFF7CB /* bigint */,
 				FA39F9C124D558FC00EFF7CB /* zxing */,
 				FAB1500224D430F000B718DF /* zbar */,
 				FAB14F4324D4084100B718DF /* SberCodeAPI.cpp */,
@@ -1041,11 +1040,11 @@
 				FA39FAED24D558FD00EFF7CB /* ITFReader.cpp in Sources */,
 				FA39FAE624D558FC00EFF7CB /* Detector.cpp in Sources */,
 				FA39FAE924D558FD00EFF7CB /* Result.cpp in Sources */,
-				FA39FB1B24D5603000EFF7CB /* BigUnsignedInABase.cc in Sources */,
+				FA39FD2124D5930000EFF7CB /* BigUnsignedInABase.cc in Sources */,
 				FA39FAB324D558FC00EFF7CB /* Detector.cpp in Sources */,
 				FA39FAE024D558FC00EFF7CB /* Version.cpp in Sources */,
 				FA39FABA24D558FC00EFF7CB /* ResultPointCallback.cpp in Sources */,
-				FA39FB1F24D5603000EFF7CB /* BigInteger.cc in Sources */,
+				FA39FD2524D5930000EFF7CB /* BigInteger.cc in Sources */,
 				FA39FA9B24D558FC00EFF7CB /* LuminanceSource.cpp in Sources */,
 				FA39FAD224D558FC00EFF7CB /* ChecksumException.cpp in Sources */,
 				FA39FAA024D558FC00EFF7CB /* QRCodeMultiReader.cpp in Sources */,
@@ -1056,7 +1055,7 @@
 				FA39FAD824D558FC00EFF7CB /* Decoder.cpp in Sources */,
 				FA39FAF024D558FD00EFF7CB /* MultiFormatUPCEANReader.cpp in Sources */,
 				FA39FAA324D558FC00EFF7CB /* GenericMultipleBarcodeReader.cpp in Sources */,
-				FA39FB1D24D5603000EFF7CB /* BigUnsigned.cc in Sources */,
+				FA39FD2324D5930000EFF7CB /* BigUnsigned.cc in Sources */,
 				FAB1504824D430F000B718DF /* code93.c in Sources */,
 				FA39FAB824D558FC00EFF7CB /* AlignmentPattern.cpp in Sources */,
 				FA39FAC224D558FC00EFF7CB /* BitSource.cpp in Sources */,
@@ -1066,7 +1065,7 @@
 				FA39FADA24D558FC00EFF7CB /* LinesSampler.cpp in Sources */,
 				FA39FAAB24D558FC00EFF7CB /* ErrorCorrectionLevel.cpp in Sources */,
 				FA39FAC724D558FC00EFF7CB /* CharacterSetECI.cpp in Sources */,
-				FA39FB1E24D5603000EFF7CB /* BigIntegerUtils.cc in Sources */,
+				FA39FD2424D5930000EFF7CB /* BigIntegerUtils.cc in Sources */,
 				FA39FAB424D558FC00EFF7CB /* FinderPatternInfo.cpp in Sources */,
 				FAB1505424D430F000B718DF /* binarize.c in Sources */,
 				FA39FAF124D558FD00EFF7CB /* UPCEReader.cpp in Sources */,
@@ -1099,7 +1098,7 @@
 				FA39FAB524D558FC00EFF7CB /* FinderPatternFinder.cpp in Sources */,
 				FA39FAF724D558FD00EFF7CB /* Code39Reader.cpp in Sources */,
 				FA39FAD724D558FC00EFF7CB /* ModulusPoly.cpp in Sources */,
-				FA39FB1C24D5603000EFF7CB /* BigIntegerAlgorithms.cc in Sources */,
+				FA39FD2224D5930000EFF7CB /* BigIntegerAlgorithms.cc in Sources */,
 				FA39FAE224D558FC00EFF7CB /* DataBlock.cpp in Sources */,
 				FAB14FA124D42A0800B718DF /* CodeData.cpp in Sources */,
 				FA39FAD924D558FC00EFF7CB /* Detector.cpp in Sources */,

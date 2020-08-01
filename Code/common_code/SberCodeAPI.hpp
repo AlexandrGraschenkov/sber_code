@@ -31,7 +31,7 @@ enum ImageFormat {
 
 class Recognizer {
 public:
-    Recognizer(CodeType types);
+    Recognizer();
     ~Recognizer();
     
     std::vector<Code> recognize(const cv::Mat &frame, ImageFormat format);

@@ -21,6 +21,7 @@
 #include <zxing/common/HybridBinarizer.h>
 
 #include <zxing/common/IllegalArgumentException.h>
+//#include <opencv2/highgui.hpp>
 
 using namespace std;
 using namespace zxing;
@@ -80,6 +81,15 @@ Ref<BitMatrix> HybridBinarizer::getBlackMatrix() {
                                blackPoints,
                                newMatrix);
     matrix_ = newMatrix;
+      
+//      cv::Mat img(newMatrix->getHeight(), newMatrix->getWidth(), CV_8UC1);
+//      for (int r = 0; r < newMatrix->getHeight(); r++) {
+//          for (int c = 0; c < newMatrix->getWidth(); c++) {
+//              img.at<uint8_t>(r, c) = newMatrix->get(c, r) ? 0 : 255;
+//          }
+//      }
+//      cv::imshow("debug", img);
+//      cv::waitKey();
   } else {
     // If the image is too small, fall back to the global histogram approach.
     matrix_ = GlobalHistogramBinarizer::getBlackMatrix();

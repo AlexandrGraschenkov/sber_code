@@ -8,14 +8,14 @@
 
 #include "SberCodeAPI.hpp"
 #include <config.h>
-#include <zbar.h>
+//#include <zbar.h>
 #include <opencv2/imgproc.hpp>
 #include <zxing/MultiFormatReader.h>
 #include <zxing/common/GreyscaleLuminanceSource.h>
 #include <zxing/common/HybridBinarizer.h>
 #include <zxing/multi/GenericMultipleBarcodeReader.h>
 
-using namespace zbar;
+//using namespace zbar;
 using namespace zxing;
 using namespace cv;
 using namespace std;
@@ -36,22 +36,22 @@ DecodeHints::EAN_8_HINT
 );
 
 namespace SberCode {
-Recognizer::Recognizer(CodeType types) {
-    zScanner = zbar_image_scanner_create();
-    zImage = zbar_image_create();
-    
-    zbar_image_scanner_set_config(zScanner, ZBAR_NONE, ZBAR_CFG_X_DENSITY, 3);
-    zbar_image_scanner_set_config(zScanner, ZBAR_NONE, ZBAR_CFG_Y_DENSITY, 3);
-    zbar_image_scanner_enable_cache(zScanner, true);
+Recognizer::Recognizer() {
+//    zScanner = zbar_image_scanner_create();
+//    zImage = zbar_image_create();
+//
+//    zbar_image_scanner_set_config(zScanner, ZBAR_NONE, ZBAR_CFG_X_DENSITY, 3);
+//    zbar_image_scanner_set_config(zScanner, ZBAR_NONE, ZBAR_CFG_Y_DENSITY, 3);
+//    zbar_image_scanner_enable_cache(zScanner, true);
     
 }
 
 Recognizer::~Recognizer() {
     if(zScanner) {
-        zbar_image_scanner_destroy(zScanner);
-        zScanner = NULL;
-        zbar_image_destroy(zImage);
-        zImage = NULL;
+//        zbar_image_scanner_destroy(zScanner);
+//        zScanner = NULL;
+//        zbar_image_destroy(zImage);
+//        zImage = NULL;
     }
 }
 
