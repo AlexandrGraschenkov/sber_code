@@ -20,6 +20,21 @@ using namespace zxing;
 using namespace cv;
 using namespace std;
 
+const DecodeHints SBER_HINT(
+DecodeHints::QR_CODE_HINT |
+DecodeHints::DATA_MATRIX_HINT |
+DecodeHints::AZTEC_HINT |
+                            
+DecodeHints::CODE_39_HINT |
+DecodeHints::CODE_93_HINT |
+DecodeHints::CODE_128_HINT |
+DecodeHints::CODABAR_HINT |
+DecodeHints::UPC_A_HINT |
+DecodeHints::UPC_E_HINT |
+DecodeHints::EAN_13_HINT |
+DecodeHints::EAN_8_HINT
+);
+
 namespace SberCode {
 Recognizer::Recognizer(CodeType types) {
     zScanner = zbar_image_scanner_create();
@@ -50,13 +65,13 @@ std::vector<Code> Recognizer::recognize(const cv::Mat &frame, ImageFormat format
     }
     
     // ZBAR
-    zbar_image_set_data(zImage, grayImg.data, grayImg.size().area(), nullptr);
-    zbar_image_set_format(zImage, zbar_fourcc('Y','8','0','0'));
-    zbar_image_set_size(zImage, grayImg.cols, grayImg.rows);
-    
-    zbar_scan_image(zScanner, zImage);
-    const zbar_symbol_set_t *symSet = zbar_image_scanner_get_results(zScanner);
-    vector<Code> result = Code::parseResult(symSet);
+//    zbar_image_set_data(zImage, grayImg.data, grayImg.size().area(), nullptr);
+//    zbar_image_set_format(zImage, zbar_fourcc('Y','8','0','0'));
+//    zbar_image_set_size(zImage, grayImg.cols, grayImg.rows);
+//
+//    zbar_scan_image(zScanner, zImage);
+//    const zbar_symbol_set_t *symSet = zbar_image_scanner_get_results(zScanner);
+//    vector<Code> result = Code::parseResult(symSet);
     
     // ZXING
 //    Ref<LuminanceSource> imgSource = MatSource::create(grayImg);
@@ -69,12 +84,12 @@ std::vector<Code> Recognizer::recognize(const cv::Mat &frame, ImageFormat format
     MultiFormatReader delegate;
     multi::GenericMultipleBarcodeReader reader(delegate);
     
-    DecodeHints hints(DecodeHints::DATA_MATRIX_HINT | DecodeHints::AZTEC_HINT);
+    DecodeHints hints(SBER_HINT);
     vector<Ref<Result>> zxingResults = reader.decodeMultiple(bitmap, hints);
-    vector<Code> result2 = Code::parseResult(zxingResults);
-    if (result2.size()) {
-        result.insert(result.end(), result2.begin(), result2.end());
-    }
+    vector<Code> result = Code::parseResult(zxingResults);
+//    if (result2.size()) {
+//        result.insert(result.end(), result2.begin(), result2.end());
+//    }
     
     return result;
 }
