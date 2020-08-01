@@ -35,11 +35,26 @@ std::vector<Code> Code::parseResult(const std::vector<zxing::Ref<zxing::Result>>
         auto format = recognized[i]->getBarcodeFormat();
         c.typeName = string(BarcodeFormat::barcodeFormatNames[(int)format]);
         c.message = recognized[i]->getText()->getText();
-        c.quality = 100;
         
         for (const auto &recP : recognized[i]->getResultPoints()->values()) {
             Point p(recP->getX(), recP->getY());
             c.location.push_back(p);
+        }
+        
+        if (c.location.size() == 2) {
+            Point vec = c.location[0] - c.location[1];
+            vec = vec / 10;
+            vec = Point(-vec.y, vec.x);
+            vector<Point> fourPoints = {
+                {c.location[0] + vec},
+                {c.location[1] + vec},
+                {c.location[1] - vec},
+                {c.location[0] - vec}
+            };
+            c.location = fourPoints;
+        }
+        if (c.typeName == "DATA_MATRIX" && c.location.size() == 4) {
+            c.location = {c.location[0], c.location[1], c.location[3], c.location[2]};
         }
         result.push_back(c);
     }

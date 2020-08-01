@@ -33,6 +33,7 @@ class Recognizer {
 public:
     Recognizer();
     ~Recognizer();
+    bool tracking;
     
     std::vector<Code> recognize(const cv::Mat &frame, ImageFormat format);
     

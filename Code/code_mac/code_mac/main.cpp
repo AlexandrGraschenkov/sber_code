@@ -40,7 +40,7 @@ string imgPath = "/Users/alex/Downloads/sber_code_data/aztec_5.jpeg";
     
     Mat img = imread(imgPath);
     
-    Recognizer rec(CodeType_None);
+    Recognizer rec;
 //    vector<Code> codes = rec.recognize(img, ImageFormat_RGB);
 //    string msg = "null";
 //    if (codes.size()) {

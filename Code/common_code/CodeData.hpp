@@ -28,16 +28,13 @@ namespace zxing {
 
 namespace SberCode {
 
-enum CodeType: int {
-    CodeType_None = 0,
-    CodeType_QR = 1<<0,
-};
-
 struct Code {
-    int quality;
     std::string typeName;
     std::string message;
     std::vector<cv::Point> location;
+    
+    double detectTime;
+    int trackId;
     
     Code(){};
 //    Code(const zbar::zbar_symbol_t *);
