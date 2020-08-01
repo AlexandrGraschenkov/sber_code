@@ -108,6 +108,7 @@
 		FA39FD2324D5930000EFF7CB /* BigUnsigned.cc in Sources */ = {isa = PBXBuildFile; fileRef = FA39FD1D24D5930000EFF7CB /* BigUnsigned.cc */; };
 		FA39FD2424D5930000EFF7CB /* BigIntegerUtils.cc in Sources */ = {isa = PBXBuildFile; fileRef = FA39FD1F24D5930000EFF7CB /* BigIntegerUtils.cc */; };
 		FA39FD2524D5930000EFF7CB /* BigInteger.cc in Sources */ = {isa = PBXBuildFile; fileRef = FA39FD2024D5930000EFF7CB /* BigInteger.cc */; };
+		FA39FD5724D5AE6B00EFF7CB /* hungarian.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA39FD5524D5AE6B00EFF7CB /* hungarian.cpp */; };
 		FAB14F3C24D407ED00B718DF /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAB14F3B24D407ED00B718DF /* main.cpp */; };
 		FAB14F4524D4084100B718DF /* SberCodeAPI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAB14F4324D4084100B718DF /* SberCodeAPI.cpp */; };
 		FAB14FA124D42A0800B718DF /* CodeData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAB14F9F24D42A0800B718DF /* CodeData.cpp */; };
@@ -359,6 +360,8 @@
 		FA39FD1E24D5930000EFF7CB /* BigIntegerLibrary.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BigIntegerLibrary.hh; sourceTree = "<group>"; };
 		FA39FD1F24D5930000EFF7CB /* BigIntegerUtils.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BigIntegerUtils.cc; sourceTree = "<group>"; };
 		FA39FD2024D5930000EFF7CB /* BigInteger.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BigInteger.cc; sourceTree = "<group>"; };
+		FA39FD5524D5AE6B00EFF7CB /* hungarian.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hungarian.cpp; sourceTree = "<group>"; };
+		FA39FD5624D5AE6B00EFF7CB /* hungarian.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = hungarian.hpp; sourceTree = "<group>"; };
 		FAB14F3824D407ED00B718DF /* code_mac */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = code_mac; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAB14F3B24D407ED00B718DF /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		FAB14F4324D4084100B718DF /* SberCodeAPI.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SberCodeAPI.cpp; sourceTree = "<group>"; };
@@ -823,6 +826,15 @@
 			path = bigint;
 			sourceTree = "<group>";
 		};
+		FA39FD5424D5AE6B00EFF7CB /* code_utils */ = {
+			isa = PBXGroup;
+			children = (
+				FA39FD5524D5AE6B00EFF7CB /* hungarian.cpp */,
+				FA39FD5624D5AE6B00EFF7CB /* hungarian.hpp */,
+			);
+			path = code_utils;
+			sourceTree = "<group>";
+		};
 		FAB14F2F24D407ED00B718DF = {
 			isa = PBXGroup;
 			children = (
@@ -853,6 +865,7 @@
 		FAB14F4224D4082500B718DF /* common_code */ = {
 			isa = PBXGroup;
 			children = (
+				FA39FD5424D5AE6B00EFF7CB /* code_utils */,
 				FA39FD1424D5930000EFF7CB /* bigint */,
 				FA39F9C124D558FC00EFF7CB /* zxing */,
 				FAB1500224D430F000B718DF /* zbar */,
@@ -1081,6 +1094,7 @@
 				FA39FAD624D558FC00EFF7CB /* ModulusGF.cpp in Sources */,
 				FA39FAB624D558FC00EFF7CB /* FinderPattern.cpp in Sources */,
 				FA39FAEF24D558FD00EFF7CB /* UPCEANReader.cpp in Sources */,
+				FA39FD5724D5AE6B00EFF7CB /* hungarian.cpp in Sources */,
 				FA39FAC924D558FC00EFF7CB /* GridSampler.cpp in Sources */,
 				FA39FADE24D558FC00EFF7CB /* ResultPoint.cpp in Sources */,
 				FAB1505024D430F000B718DF /* qrdec.c in Sources */,

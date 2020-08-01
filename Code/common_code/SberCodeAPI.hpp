@@ -11,6 +11,7 @@
 
 #include <stdio.h>
 #include "CodeData.hpp"
+#include <opencv2/imgproc.hpp>
 
 
 namespace zbar {
@@ -33,14 +34,20 @@ class Recognizer {
 public:
     Recognizer();
     ~Recognizer();
-    bool tracking;
+    bool tracking = false;
     
     std::vector<Code> recognize(const cv::Mat &frame, ImageFormat format);
     
 private:
     zbar::zbar_image_scanner_t *zScanner = nullptr;
     zbar::zbar_image_t *zImage = nullptr;
-    cv::Mat grayImg;
+    cv::Mat grayImg, tempImg;
+    std::vector<Code> historyTrack;
+    int lastCodeId = 0;
+    double keepTrackSec = 5.0;
+    cv::Ptr<cv::CLAHE> clahe;
+    
+    void doTrack(std::vector<Code> &recognizedCodes);
 };
 
 
