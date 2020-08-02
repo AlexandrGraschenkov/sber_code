@@ -9,9 +9,12 @@
 #ifndef SberCode_hpp
 #define SberCode_hpp
 
+#define USE_ZBAR
+
 #include <stdio.h>
 #include "CodeData.hpp"
 #include <opencv2/imgproc.hpp>
+
 
 
 namespace zbar {
@@ -47,6 +50,7 @@ private:
     double keepTrackSec = 5.0;
     cv::Ptr<cv::CLAHE> clahe;
     
+    void filterResult(std::vector<Code> &recognizedCodes);
     void doTrack(std::vector<Code> &recognizedCodes);
 };
 

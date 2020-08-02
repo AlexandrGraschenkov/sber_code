@@ -8,7 +8,11 @@
 
 #include "SberCodeAPI.hpp"
 #include <config.h>
-//#include <zbar.h>
+
+#ifdef USE_ZBAR
+#include <zbar.h>
+#endif
+
 #include <opencv2/imgproc.hpp>
 #include <opencv2/highgui.hpp>
 #include <zxing/MultiFormatReader.h>
@@ -19,7 +23,9 @@
 #include "code_utils/hungarian.hpp"
 #include <unordered_set>
 
-//using namespace zbar;
+#ifdef USE_ZBAR
+using namespace zbar;
+#endif
 using namespace zxing;
 using namespace cv;
 using namespace std;
@@ -50,21 +56,25 @@ static double getTimestamp() {
 
 Recognizer::Recognizer() {
     clahe = createCLAHE(4, Size(3, 3));
-//    zScanner = zbar_image_scanner_create();
-//    zImage = zbar_image_create();
-//
-//    zbar_image_scanner_set_config(zScanner, ZBAR_NONE, ZBAR_CFG_X_DENSITY, 3);
-//    zbar_image_scanner_set_config(zScanner, ZBAR_NONE, ZBAR_CFG_Y_DENSITY, 3);
-//    zbar_image_scanner_enable_cache(zScanner, true);
+#ifdef USE_ZBAR
+    zScanner = zbar_image_scanner_create();
+    zImage = zbar_image_create();
+
+    zbar_image_scanner_set_config(zScanner, ZBAR_NONE, ZBAR_CFG_X_DENSITY, 3);
+    zbar_image_scanner_set_config(zScanner, ZBAR_NONE, ZBAR_CFG_Y_DENSITY, 3);
+    zbar_image_scanner_enable_cache(zScanner, true);
+#endif
     
 }
 
 Recognizer::~Recognizer() {
     if(zScanner) {
-//        zbar_image_scanner_destroy(zScanner);
-//        zScanner = NULL;
-//        zbar_image_destroy(zImage);
-//        zImage = NULL;
+#ifdef USE_ZBAR
+        zbar_image_scanner_destroy(zScanner);
+        zScanner = NULL;
+        zbar_image_destroy(zImage);
+        zImage = NULL;
+#endif
     }
 }
 
@@ -83,18 +93,23 @@ std::vector<Code> Recognizer::recognize(const cv::Mat &frame, ImageFormat format
 //    clahe->apply(tempImg, grayImg);
 //    imshow("orig", tempImg);
 //    imshow("contrast", grayImg);
+    
+    
+    vector<Code> result;
+    
     // ZBAR
-//    zbar_image_set_data(zImage, grayImg.data, grayImg.size().area(), nullptr);
-//    zbar_image_set_format(zImage, zbar_fourcc('Y','8','0','0'));
-//    zbar_image_set_size(zImage, grayImg.cols, grayImg.rows);
-//
-//    zbar_scan_image(zScanner, zImage);
-//    const zbar_symbol_set_t *symSet = zbar_image_scanner_get_results(zScanner);
-//    vector<Code> result = Code::parseResult(symSet);
+#ifdef USE_ZBAR
+    zbar_image_set_data(zImage, grayImg.data, grayImg.size().area(), nullptr);
+    zbar_image_set_format(zImage, zbar_fourcc('Y','8','0','0'));
+    zbar_image_set_size(zImage, grayImg.cols, grayImg.rows);
+
+    zbar_scan_image(zScanner, zImage);
+    const zbar_symbol_set_t *symSet = zbar_image_scanner_get_results(zScanner);
+    result = Code::parseResult(symSet);
+#endif
+    cout << result.size() << endl;
     
     // ZXING
-//    Ref<LuminanceSource> imgSource = MatSource::create(grayImg);
-//    Ref<LuminanceSource>(new GreyscaleLuminanceSource(greyData_, dataWidth_, dataHeight_, left, top, width, height))
     ArrayRef<char> dataRef((char *)grayImg.data, grayImg.size().area());
     Ref<LuminanceSource> imgSource = Ref<LuminanceSource>(new GreyscaleLuminanceSource(dataRef, grayImg.cols, grayImg.rows, 0, 0, grayImg.cols, grayImg.rows));
     Ref<Binarizer> binarizer = Ref<Binarizer>(new HybridBinarizer(imgSource));
@@ -106,15 +121,16 @@ std::vector<Code> Recognizer::recognize(const cv::Mat &frame, ImageFormat format
     DecodeHints hints(SBER_HINT);
     vector<Ref<Result>> zxingResults;
     try {
-        zxingResults = reader.decodeMultiple(bitmap, hints);
+//        zxingResults = reader.decodeMultiple(bitmap, hints);
     } catch (std::exception exp) {
         cout << "Some err" << endl;
     }
-    vector<Code> result = Code::parseResult(zxingResults);
-//    if (result2.size()) {
+    vector<Code> result2 = Code::parseResult(zxingResults);
+    if (result2.size()) {
 //        result.insert(result.end(), result2.begin(), result2.end());
-//    }
+    }
     
+//    filterResult(result);
     double currTime = getTimestamp();
     for (Code &c : result) {
         c.detectTime = currTime;
@@ -122,6 +138,12 @@ std::vector<Code> Recognizer::recognize(const cv::Mat &frame, ImageFormat format
     
     if (tracking) {
         doTrack(result);
+    }
+    
+    
+    if (result.size()) {
+        Rect r = cv::boundingRect(result[0].location);
+        cout << result.size() << result[0].message << " Rect " << r.x << " " << r.y << " " << r.width << " " << r.height << endl;
     }
     
     return result;
@@ -138,6 +160,31 @@ Point2f getCenter(const std::vector<Point> &vec) {
     }
     center = center / (int)vec.size();
     return center;
+}
+
+void Recognizer::filterResult(std::vector<Code> &recognizedCodes) {
+    // remove too small codes
+    for (int i = 0; i < recognizedCodes.size(); i++) {
+        Rect foundedRect = boundingRect(recognizedCodes[i].location);
+        if (foundedRect.width <= 2 || foundedRect.height <= 2) {
+            recognizedCodes.erase(recognizedCodes.begin() + i);
+            i--;
+        }
+    }
+    
+    // remove dublicates
+    for (int i = 0; i < recognizedCodes.size(); i++) {
+        for (int j = i+1; j < recognizedCodes.size(); i++) {
+            Point c1 = getCenter(recognizedCodes[i].location);
+            Point c2 = getCenter(recognizedCodes[j].location);
+            double d1 = pointPolygonTest(recognizedCodes[i].location, c2, false);
+            double d2 = pointPolygonTest(recognizedCodes[j].location, c1, false);
+            if (max(d1, d2) > 0) {
+                recognizedCodes.erase(recognizedCodes.begin() + j);
+                j--;
+            }
+        }
+    }
 }
 
 void Recognizer::doTrack(std::vector<Code> &recognizedCodes) {

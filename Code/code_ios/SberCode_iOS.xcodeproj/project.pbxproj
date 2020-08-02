@@ -240,6 +240,66 @@
 		FA39FD5C24D5AE7F00EFF7CB /* hungarian.hpp in Headers */ = {isa = PBXBuildFile; fileRef = FA39FD5A24D5AE7F00EFF7CB /* hungarian.hpp */; };
 		FA39FD6024D5B28F00EFF7CB /* VisualizeBehavior.mm in Sources */ = {isa = PBXBuildFile; fileRef = FA39FD5F24D5B28F00EFF7CB /* VisualizeBehavior.mm */; };
 		FA39FD6324D5B46D00EFF7CB /* DisplayTrackPoly.mm in Sources */ = {isa = PBXBuildFile; fileRef = FA39FD6224D5B46D00EFF7CB /* DisplayTrackPoly.mm */; };
+		FA39FDA624D6766400EFF7CB /* scanner.c in Sources */ = {isa = PBXBuildFile; fileRef = FA39FD6524D6766400EFF7CB /* scanner.c */; };
+		FA39FDA724D6766400EFF7CB /* error.h in Headers */ = {isa = PBXBuildFile; fileRef = FA39FD6624D6766400EFF7CB /* error.h */; };
+		FA39FDA824D6766400EFF7CB /* img_scanner.c in Sources */ = {isa = PBXBuildFile; fileRef = FA39FD6824D6766400EFF7CB /* img_scanner.c */; };
+		FA39FDA924D6766400EFF7CB /* debug.h in Headers */ = {isa = PBXBuildFile; fileRef = FA39FD6924D6766400EFF7CB /* debug.h */; };
+		FA39FDAA24D6766400EFF7CB /* refcnt.c in Sources */ = {isa = PBXBuildFile; fileRef = FA39FD6A24D6766400EFF7CB /* refcnt.c */; };
+		FA39FDAB24D6766400EFF7CB /* processor.h in Headers */ = {isa = PBXBuildFile; fileRef = FA39FD6B24D6766400EFF7CB /* processor.h */; };
+		FA39FDAC24D6766400EFF7CB /* config.h in Headers */ = {isa = PBXBuildFile; fileRef = FA39FD6C24D6766400EFF7CB /* config.h */; };
+		FA39FDAD24D6766400EFF7CB /* symbol.h in Headers */ = {isa = PBXBuildFile; fileRef = FA39FD6D24D6766400EFF7CB /* symbol.h */; };
+		FA39FDAE24D6766400EFF7CB /* event.h in Headers */ = {isa = PBXBuildFile; fileRef = FA39FD6E24D6766400EFF7CB /* event.h */; };
+		FA39FDAF24D6766400EFF7CB /* posix.h in Headers */ = {isa = PBXBuildFile; fileRef = FA39FD7024D6766400EFF7CB /* posix.h */; };
+		FA39FDB024D6766400EFF7CB /* decoder.h in Headers */ = {isa = PBXBuildFile; fileRef = FA39FD7124D6766400EFF7CB /* decoder.h */; };
+		FA39FDB124D6766400EFF7CB /* window.h in Headers */ = {isa = PBXBuildFile; fileRef = FA39FD7224D6766400EFF7CB /* window.h */; };
+		FA39FDB224D6766400EFF7CB /* codabar.h in Headers */ = {isa = PBXBuildFile; fileRef = FA39FD7424D6766400EFF7CB /* codabar.h */; };
+		FA39FDB324D6766400EFF7CB /* qr_finder.c in Sources */ = {isa = PBXBuildFile; fileRef = FA39FD7524D6766400EFF7CB /* qr_finder.c */; };
+		FA39FDB424D6766400EFF7CB /* code93.c in Sources */ = {isa = PBXBuildFile; fileRef = FA39FD7624D6766400EFF7CB /* code93.c */; };
+		FA39FDB524D6766400EFF7CB /* code128.h in Headers */ = {isa = PBXBuildFile; fileRef = FA39FD7724D6766400EFF7CB /* code128.h */; };
+		FA39FDB624D6766400EFF7CB /* databar.h in Headers */ = {isa = PBXBuildFile; fileRef = FA39FD7824D6766400EFF7CB /* databar.h */; };
+		FA39FDB724D6766400EFF7CB /* ean.h in Headers */ = {isa = PBXBuildFile; fileRef = FA39FD7924D6766400EFF7CB /* ean.h */; };
+		FA39FDB824D6766400EFF7CB /* i25.h in Headers */ = {isa = PBXBuildFile; fileRef = FA39FD7A24D6766400EFF7CB /* i25.h */; };
+		FA39FDB924D6766400EFF7CB /* code39.c in Sources */ = {isa = PBXBuildFile; fileRef = FA39FD7B24D6766400EFF7CB /* code39.c */; };
+		FA39FDBA24D6766400EFF7CB /* codabar.c in Sources */ = {isa = PBXBuildFile; fileRef = FA39FD7C24D6766400EFF7CB /* codabar.c */; };
+		FA39FDBB24D6766400EFF7CB /* pdf417_hash.h in Headers */ = {isa = PBXBuildFile; fileRef = FA39FD7D24D6766400EFF7CB /* pdf417_hash.h */; };
+		FA39FDBC24D6766400EFF7CB /* pdf417.h in Headers */ = {isa = PBXBuildFile; fileRef = FA39FD7E24D6766400EFF7CB /* pdf417.h */; };
+		FA39FDBD24D6766400EFF7CB /* databar.c in Sources */ = {isa = PBXBuildFile; fileRef = FA39FD7F24D6766400EFF7CB /* databar.c */; };
+		FA39FDBE24D6766400EFF7CB /* code93.h in Headers */ = {isa = PBXBuildFile; fileRef = FA39FD8024D6766400EFF7CB /* code93.h */; };
+		FA39FDBF24D6766400EFF7CB /* qr_finder.h in Headers */ = {isa = PBXBuildFile; fileRef = FA39FD8124D6766400EFF7CB /* qr_finder.h */; };
+		FA39FDC024D6766400EFF7CB /* code128.c in Sources */ = {isa = PBXBuildFile; fileRef = FA39FD8224D6766400EFF7CB /* code128.c */; };
+		FA39FDC124D6766400EFF7CB /* i25.c in Sources */ = {isa = PBXBuildFile; fileRef = FA39FD8324D6766400EFF7CB /* i25.c */; };
+		FA39FDC224D6766400EFF7CB /* qrdectxt.c in Sources */ = {isa = PBXBuildFile; fileRef = FA39FD8424D6766400EFF7CB /* qrdectxt.c */; };
+		FA39FDC324D6766400EFF7CB /* ean.c in Sources */ = {isa = PBXBuildFile; fileRef = FA39FD8524D6766400EFF7CB /* ean.c */; };
+		FA39FDC424D6766400EFF7CB /* code39.h in Headers */ = {isa = PBXBuildFile; fileRef = FA39FD8624D6766400EFF7CB /* code39.h */; };
+		FA39FDC524D6766400EFF7CB /* svg.h in Headers */ = {isa = PBXBuildFile; fileRef = FA39FD8724D6766400EFF7CB /* svg.h */; };
+		FA39FDC624D6766400EFF7CB /* image.c in Sources */ = {isa = PBXBuildFile; fileRef = FA39FD8824D6766400EFF7CB /* image.c */; };
+		FA39FDC724D6766400EFF7CB /* zbar.h in Headers */ = {isa = PBXBuildFile; fileRef = FA39FD8924D6766400EFF7CB /* zbar.h */; };
+		FA39FDC824D6766400EFF7CB /* qrdec.c in Sources */ = {isa = PBXBuildFile; fileRef = FA39FD8B24D6766400EFF7CB /* qrdec.c */; };
+		FA39FDC924D6766400EFF7CB /* binarize.h in Headers */ = {isa = PBXBuildFile; fileRef = FA39FD8C24D6766400EFF7CB /* binarize.h */; };
+		FA39FDCA24D6766400EFF7CB /* bch15_5.c in Sources */ = {isa = PBXBuildFile; fileRef = FA39FD8D24D6766400EFF7CB /* bch15_5.c */; };
+		FA39FDCB24D6766400EFF7CB /* util.c in Sources */ = {isa = PBXBuildFile; fileRef = FA39FD8E24D6766400EFF7CB /* util.c */; };
+		FA39FDCC24D6766400EFF7CB /* isaac.c in Sources */ = {isa = PBXBuildFile; fileRef = FA39FD8F24D6766400EFF7CB /* isaac.c */; };
+		FA39FDCD24D6766400EFF7CB /* rs.h in Headers */ = {isa = PBXBuildFile; fileRef = FA39FD9024D6766400EFF7CB /* rs.h */; };
+		FA39FDCE24D6766400EFF7CB /* binarize.c in Sources */ = {isa = PBXBuildFile; fileRef = FA39FD9124D6766400EFF7CB /* binarize.c */; };
+		FA39FDCF24D6766400EFF7CB /* bch15_5.h in Headers */ = {isa = PBXBuildFile; fileRef = FA39FD9224D6766400EFF7CB /* bch15_5.h */; };
+		FA39FDD024D6766400EFF7CB /* qrdec.h in Headers */ = {isa = PBXBuildFile; fileRef = FA39FD9324D6766400EFF7CB /* qrdec.h */; };
+		FA39FDD124D6766400EFF7CB /* util.h in Headers */ = {isa = PBXBuildFile; fileRef = FA39FD9424D6766400EFF7CB /* util.h */; };
+		FA39FDD224D6766400EFF7CB /* isaac.h in Headers */ = {isa = PBXBuildFile; fileRef = FA39FD9524D6766400EFF7CB /* isaac.h */; };
+		FA39FDD324D6766400EFF7CB /* rs.c in Sources */ = {isa = PBXBuildFile; fileRef = FA39FD9624D6766400EFF7CB /* rs.c */; };
+		FA39FDD424D6766400EFF7CB /* img_scanner.h in Headers */ = {isa = PBXBuildFile; fileRef = FA39FD9724D6766400EFF7CB /* img_scanner.h */; };
+		FA39FDD524D6766400EFF7CB /* timer.h in Headers */ = {isa = PBXBuildFile; fileRef = FA39FD9824D6766400EFF7CB /* timer.h */; };
+		FA39FDD624D6766400EFF7CB /* thread.h in Headers */ = {isa = PBXBuildFile; fileRef = FA39FD9924D6766400EFF7CB /* thread.h */; };
+		FA39FDD724D6766400EFF7CB /* qrcode.h in Headers */ = {isa = PBXBuildFile; fileRef = FA39FD9A24D6766400EFF7CB /* qrcode.h */; };
+		FA39FDD824D6766400EFF7CB /* error.c in Sources */ = {isa = PBXBuildFile; fileRef = FA39FD9B24D6766400EFF7CB /* error.c */; };
+		FA39FDD924D6766400EFF7CB /* win.h in Headers */ = {isa = PBXBuildFile; fileRef = FA39FD9D24D6766400EFF7CB /* win.h */; };
+		FA39FDDA24D6766400EFF7CB /* x.h in Headers */ = {isa = PBXBuildFile; fileRef = FA39FD9E24D6766400EFF7CB /* x.h */; };
+		FA39FDDB24D6766400EFF7CB /* symbol.c in Sources */ = {isa = PBXBuildFile; fileRef = FA39FD9F24D6766400EFF7CB /* symbol.c */; };
+		FA39FDDC24D6766400EFF7CB /* config.c in Sources */ = {isa = PBXBuildFile; fileRef = FA39FDA024D6766400EFF7CB /* config.c */; };
+		FA39FDDD24D6766400EFF7CB /* video.h in Headers */ = {isa = PBXBuildFile; fileRef = FA39FDA124D6766400EFF7CB /* video.h */; };
+		FA39FDDE24D6766400EFF7CB /* refcnt.h in Headers */ = {isa = PBXBuildFile; fileRef = FA39FDA224D6766400EFF7CB /* refcnt.h */; };
+		FA39FDDF24D6766400EFF7CB /* decoder.c in Sources */ = {isa = PBXBuildFile; fileRef = FA39FDA324D6766400EFF7CB /* decoder.c */; };
+		FA39FDE024D6766400EFF7CB /* mutex.h in Headers */ = {isa = PBXBuildFile; fileRef = FA39FDA424D6766400EFF7CB /* mutex.h */; };
+		FA39FDE124D6766400EFF7CB /* image.h in Headers */ = {isa = PBXBuildFile; fileRef = FA39FDA524D6766400EFF7CB /* image.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -513,6 +573,66 @@
 		FA39FD5F24D5B28F00EFF7CB /* VisualizeBehavior.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = VisualizeBehavior.mm; sourceTree = "<group>"; };
 		FA39FD6124D5B46D00EFF7CB /* DisplayTrackPoly.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DisplayTrackPoly.h; sourceTree = "<group>"; };
 		FA39FD6224D5B46D00EFF7CB /* DisplayTrackPoly.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = DisplayTrackPoly.mm; sourceTree = "<group>"; };
+		FA39FD6524D6766400EFF7CB /* scanner.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = scanner.c; sourceTree = "<group>"; };
+		FA39FD6624D6766400EFF7CB /* error.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = error.h; sourceTree = "<group>"; };
+		FA39FD6824D6766400EFF7CB /* img_scanner.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = img_scanner.c; sourceTree = "<group>"; };
+		FA39FD6924D6766400EFF7CB /* debug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = debug.h; sourceTree = "<group>"; };
+		FA39FD6A24D6766400EFF7CB /* refcnt.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = refcnt.c; sourceTree = "<group>"; };
+		FA39FD6B24D6766400EFF7CB /* processor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = processor.h; sourceTree = "<group>"; };
+		FA39FD6C24D6766400EFF7CB /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
+		FA39FD6D24D6766400EFF7CB /* symbol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = symbol.h; sourceTree = "<group>"; };
+		FA39FD6E24D6766400EFF7CB /* event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = event.h; sourceTree = "<group>"; };
+		FA39FD7024D6766400EFF7CB /* posix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = posix.h; sourceTree = "<group>"; };
+		FA39FD7124D6766400EFF7CB /* decoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = decoder.h; sourceTree = "<group>"; };
+		FA39FD7224D6766400EFF7CB /* window.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = window.h; sourceTree = "<group>"; };
+		FA39FD7424D6766400EFF7CB /* codabar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = codabar.h; sourceTree = "<group>"; };
+		FA39FD7524D6766400EFF7CB /* qr_finder.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = qr_finder.c; sourceTree = "<group>"; };
+		FA39FD7624D6766400EFF7CB /* code93.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = code93.c; sourceTree = "<group>"; };
+		FA39FD7724D6766400EFF7CB /* code128.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = code128.h; sourceTree = "<group>"; };
+		FA39FD7824D6766400EFF7CB /* databar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = databar.h; sourceTree = "<group>"; };
+		FA39FD7924D6766400EFF7CB /* ean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ean.h; sourceTree = "<group>"; };
+		FA39FD7A24D6766400EFF7CB /* i25.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = i25.h; sourceTree = "<group>"; };
+		FA39FD7B24D6766400EFF7CB /* code39.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = code39.c; sourceTree = "<group>"; };
+		FA39FD7C24D6766400EFF7CB /* codabar.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = codabar.c; sourceTree = "<group>"; };
+		FA39FD7D24D6766400EFF7CB /* pdf417_hash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pdf417_hash.h; sourceTree = "<group>"; };
+		FA39FD7E24D6766400EFF7CB /* pdf417.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pdf417.h; sourceTree = "<group>"; };
+		FA39FD7F24D6766400EFF7CB /* databar.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = databar.c; sourceTree = "<group>"; };
+		FA39FD8024D6766400EFF7CB /* code93.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = code93.h; sourceTree = "<group>"; };
+		FA39FD8124D6766400EFF7CB /* qr_finder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = qr_finder.h; sourceTree = "<group>"; };
+		FA39FD8224D6766400EFF7CB /* code128.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = code128.c; sourceTree = "<group>"; };
+		FA39FD8324D6766400EFF7CB /* i25.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = i25.c; sourceTree = "<group>"; };
+		FA39FD8424D6766400EFF7CB /* qrdectxt.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = qrdectxt.c; sourceTree = "<group>"; };
+		FA39FD8524D6766400EFF7CB /* ean.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ean.c; sourceTree = "<group>"; };
+		FA39FD8624D6766400EFF7CB /* code39.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = code39.h; sourceTree = "<group>"; };
+		FA39FD8724D6766400EFF7CB /* svg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = svg.h; sourceTree = "<group>"; };
+		FA39FD8824D6766400EFF7CB /* image.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = image.c; sourceTree = "<group>"; };
+		FA39FD8924D6766400EFF7CB /* zbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zbar.h; sourceTree = "<group>"; };
+		FA39FD8B24D6766400EFF7CB /* qrdec.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = qrdec.c; sourceTree = "<group>"; };
+		FA39FD8C24D6766400EFF7CB /* binarize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = binarize.h; sourceTree = "<group>"; };
+		FA39FD8D24D6766400EFF7CB /* bch15_5.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = bch15_5.c; sourceTree = "<group>"; };
+		FA39FD8E24D6766400EFF7CB /* util.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = util.c; sourceTree = "<group>"; };
+		FA39FD8F24D6766400EFF7CB /* isaac.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = isaac.c; sourceTree = "<group>"; };
+		FA39FD9024D6766400EFF7CB /* rs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rs.h; sourceTree = "<group>"; };
+		FA39FD9124D6766400EFF7CB /* binarize.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = binarize.c; sourceTree = "<group>"; };
+		FA39FD9224D6766400EFF7CB /* bch15_5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bch15_5.h; sourceTree = "<group>"; };
+		FA39FD9324D6766400EFF7CB /* qrdec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = qrdec.h; sourceTree = "<group>"; };
+		FA39FD9424D6766400EFF7CB /* util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = util.h; sourceTree = "<group>"; };
+		FA39FD9524D6766400EFF7CB /* isaac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = isaac.h; sourceTree = "<group>"; };
+		FA39FD9624D6766400EFF7CB /* rs.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = rs.c; sourceTree = "<group>"; };
+		FA39FD9724D6766400EFF7CB /* img_scanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = img_scanner.h; sourceTree = "<group>"; };
+		FA39FD9824D6766400EFF7CB /* timer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = timer.h; sourceTree = "<group>"; };
+		FA39FD9924D6766400EFF7CB /* thread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = thread.h; sourceTree = "<group>"; };
+		FA39FD9A24D6766400EFF7CB /* qrcode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = qrcode.h; sourceTree = "<group>"; };
+		FA39FD9B24D6766400EFF7CB /* error.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = error.c; sourceTree = "<group>"; };
+		FA39FD9D24D6766400EFF7CB /* win.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = win.h; sourceTree = "<group>"; };
+		FA39FD9E24D6766400EFF7CB /* x.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = x.h; sourceTree = "<group>"; };
+		FA39FD9F24D6766400EFF7CB /* symbol.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = symbol.c; sourceTree = "<group>"; };
+		FA39FDA024D6766400EFF7CB /* config.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = config.c; sourceTree = "<group>"; };
+		FA39FDA124D6766400EFF7CB /* video.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = video.h; sourceTree = "<group>"; };
+		FA39FDA224D6766400EFF7CB /* refcnt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = refcnt.h; sourceTree = "<group>"; };
+		FA39FDA324D6766400EFF7CB /* decoder.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = decoder.c; sourceTree = "<group>"; };
+		FA39FDA424D6766400EFF7CB /* mutex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mutex.h; sourceTree = "<group>"; };
+		FA39FDA524D6766400EFF7CB /* image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = image.h; sourceTree = "<group>"; };
 		FB8F65BDD2E84831F8910EA9 /* Pods-SberCode_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SberCode_iOS.debug.xcconfig"; path = "Target Support Files/Pods-SberCode_iOS/Pods-SberCode_iOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -610,6 +730,7 @@
 				FA39FD5824D5AE7F00EFF7CB /* code_utils */,
 				FA39FD2624D5938500EFF7CB /* bigint */,
 				FA39FB5D24D5911100EFF7CB /* zxing */,
+				FA39FD6424D6766400EFF7CB /* zbar */,
 				FA39FB4F24D590F300EFF7CB /* sber_code.h */,
 				FA39FB5024D590F300EFF7CB /* Info.plist */,
 			);
@@ -1042,6 +1163,114 @@
 			path = visualize;
 			sourceTree = "<group>";
 		};
+		FA39FD6424D6766400EFF7CB /* zbar */ = {
+			isa = PBXGroup;
+			children = (
+				FA39FD6524D6766400EFF7CB /* scanner.c */,
+				FA39FD6624D6766400EFF7CB /* error.h */,
+				FA39FD6724D6766400EFF7CB /* video */,
+				FA39FD6824D6766400EFF7CB /* img_scanner.c */,
+				FA39FD6924D6766400EFF7CB /* debug.h */,
+				FA39FD6A24D6766400EFF7CB /* refcnt.c */,
+				FA39FD6B24D6766400EFF7CB /* processor.h */,
+				FA39FD6C24D6766400EFF7CB /* config.h */,
+				FA39FD6D24D6766400EFF7CB /* symbol.h */,
+				FA39FD6E24D6766400EFF7CB /* event.h */,
+				FA39FD6F24D6766400EFF7CB /* processor */,
+				FA39FD7124D6766400EFF7CB /* decoder.h */,
+				FA39FD7224D6766400EFF7CB /* window.h */,
+				FA39FD7324D6766400EFF7CB /* decoder */,
+				FA39FD8724D6766400EFF7CB /* svg.h */,
+				FA39FD8824D6766400EFF7CB /* image.c */,
+				FA39FD8924D6766400EFF7CB /* zbar.h */,
+				FA39FD8A24D6766400EFF7CB /* qrcode */,
+				FA39FD9724D6766400EFF7CB /* img_scanner.h */,
+				FA39FD9824D6766400EFF7CB /* timer.h */,
+				FA39FD9924D6766400EFF7CB /* thread.h */,
+				FA39FD9A24D6766400EFF7CB /* qrcode.h */,
+				FA39FD9B24D6766400EFF7CB /* error.c */,
+				FA39FD9C24D6766400EFF7CB /* window */,
+				FA39FD9F24D6766400EFF7CB /* symbol.c */,
+				FA39FDA024D6766400EFF7CB /* config.c */,
+				FA39FDA124D6766400EFF7CB /* video.h */,
+				FA39FDA224D6766400EFF7CB /* refcnt.h */,
+				FA39FDA324D6766400EFF7CB /* decoder.c */,
+				FA39FDA424D6766400EFF7CB /* mutex.h */,
+				FA39FDA524D6766400EFF7CB /* image.h */,
+			);
+			name = zbar;
+			path = ../../common_code/zbar;
+			sourceTree = "<group>";
+		};
+		FA39FD6724D6766400EFF7CB /* video */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = video;
+			sourceTree = "<group>";
+		};
+		FA39FD6F24D6766400EFF7CB /* processor */ = {
+			isa = PBXGroup;
+			children = (
+				FA39FD7024D6766400EFF7CB /* posix.h */,
+			);
+			path = processor;
+			sourceTree = "<group>";
+		};
+		FA39FD7324D6766400EFF7CB /* decoder */ = {
+			isa = PBXGroup;
+			children = (
+				FA39FD7424D6766400EFF7CB /* codabar.h */,
+				FA39FD7524D6766400EFF7CB /* qr_finder.c */,
+				FA39FD7624D6766400EFF7CB /* code93.c */,
+				FA39FD7724D6766400EFF7CB /* code128.h */,
+				FA39FD7824D6766400EFF7CB /* databar.h */,
+				FA39FD7924D6766400EFF7CB /* ean.h */,
+				FA39FD7A24D6766400EFF7CB /* i25.h */,
+				FA39FD7B24D6766400EFF7CB /* code39.c */,
+				FA39FD7C24D6766400EFF7CB /* codabar.c */,
+				FA39FD7D24D6766400EFF7CB /* pdf417_hash.h */,
+				FA39FD7E24D6766400EFF7CB /* pdf417.h */,
+				FA39FD7F24D6766400EFF7CB /* databar.c */,
+				FA39FD8024D6766400EFF7CB /* code93.h */,
+				FA39FD8124D6766400EFF7CB /* qr_finder.h */,
+				FA39FD8224D6766400EFF7CB /* code128.c */,
+				FA39FD8324D6766400EFF7CB /* i25.c */,
+				FA39FD8424D6766400EFF7CB /* qrdectxt.c */,
+				FA39FD8524D6766400EFF7CB /* ean.c */,
+				FA39FD8624D6766400EFF7CB /* code39.h */,
+			);
+			path = decoder;
+			sourceTree = "<group>";
+		};
+		FA39FD8A24D6766400EFF7CB /* qrcode */ = {
+			isa = PBXGroup;
+			children = (
+				FA39FD8B24D6766400EFF7CB /* qrdec.c */,
+				FA39FD8C24D6766400EFF7CB /* binarize.h */,
+				FA39FD8D24D6766400EFF7CB /* bch15_5.c */,
+				FA39FD8E24D6766400EFF7CB /* util.c */,
+				FA39FD8F24D6766400EFF7CB /* isaac.c */,
+				FA39FD9024D6766400EFF7CB /* rs.h */,
+				FA39FD9124D6766400EFF7CB /* binarize.c */,
+				FA39FD9224D6766400EFF7CB /* bch15_5.h */,
+				FA39FD9324D6766400EFF7CB /* qrdec.h */,
+				FA39FD9424D6766400EFF7CB /* util.h */,
+				FA39FD9524D6766400EFF7CB /* isaac.h */,
+				FA39FD9624D6766400EFF7CB /* rs.c */,
+			);
+			path = qrcode;
+			sourceTree = "<group>";
+		};
+		FA39FD9C24D6766400EFF7CB /* window */ = {
+			isa = PBXGroup;
+			children = (
+				FA39FD9D24D6766400EFF7CB /* win.h */,
+				FA39FD9E24D6766400EFF7CB /* x.h */,
+			);
+			path = window;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -1055,6 +1284,7 @@
 				FA39FC4524D5911200EFF7CB /* MultipleBarcodeReader.h in Headers */,
 				FA39FCAA24D5911200EFF7CB /* GlobalHistogramBinarizer.h in Headers */,
 				FA39FC6F24D5911200EFF7CB /* QRCodeReader.h in Headers */,
+				FA39FDE124D6766400EFF7CB /* image.h in Headers */,
 				FA39FC3B24D5911200EFF7CB /* SberCodeAPI.hpp in Headers */,
 				FA39FCAD24D5911200EFF7CB /* HybridBinarizer.h in Headers */,
 				FA39FCA124D5911200EFF7CB /* IllegalArgumentException.h in Headers */,
@@ -1064,17 +1294,25 @@
 				FA39FC9924D5911200EFF7CB /* Array.h in Headers */,
 				FA39FCBB24D5911200EFF7CB /* ModulusGF.h in Headers */,
 				FA39FC9624D5911200EFF7CB /* BitMatrix.h in Headers */,
+				FA39FDB724D6766400EFF7CB /* ean.h in Headers */,
 				FA39FC8124D5911200EFF7CB /* GridSampler.h in Headers */,
 				FA39FCCB24D5911200EFF7CB /* DataBlock.h in Headers */,
+				FA39FDC924D6766400EFF7CB /* binarize.h in Headers */,
 				FA39FC4A24D5911200EFF7CB /* MultiFinderPatternFinder.h in Headers */,
+				FA39FDD924D6766400EFF7CB /* win.h in Headers */,
 				FA39FC4224D5911200EFF7CB /* BinaryBitmap.h in Headers */,
 				FA39FC8A24D5911200EFF7CB /* GreyscaleRotatedLuminanceSource.h in Headers */,
 				FA39FC7F24D5911200EFF7CB /* DecodeHints.h in Headers */,
+				FA39FDE024D6766400EFF7CB /* mutex.h in Headers */,
 				FA39FC6724D5911200EFF7CB /* DataMask.h in Headers */,
 				FA39FC8824D5911200EFF7CB /* StringUtils.h in Headers */,
 				FA39FC4124D5911200EFF7CB /* Binarizer.h in Headers */,
+				FA39FDAF24D6766400EFF7CB /* posix.h in Headers */,
 				FA39FC9324D5911200EFF7CB /* WhiteRectangleDetector.h in Headers */,
 				FA39FD3524D5938500EFF7CB /* BigUnsignedInABase.hh in Headers */,
+				FA39FDB224D6766400EFF7CB /* codabar.h in Headers */,
+				FA39FDD624D6766400EFF7CB /* thread.h in Headers */,
+				FA39FDD224D6766400EFF7CB /* isaac.h in Headers */,
 				FA39FCD024D5911200EFF7CB /* Decoder.h in Headers */,
 				FA39FCB324D5911200EFF7CB /* BitMatrixParser.h in Headers */,
 				FA39FCE224D5911200EFF7CB /* UPCEReader.h in Headers */,
@@ -1086,6 +1324,8 @@
 				FA39FD3924D5938500EFF7CB /* BigInteger.hh in Headers */,
 				FA39FC6824D5911200EFF7CB /* Mode.h in Headers */,
 				FA39FC5924D5911200EFF7CB /* Result.h in Headers */,
+				FA39FDAB24D6766400EFF7CB /* processor.h in Headers */,
+				FA39FDDD24D6766400EFF7CB /* video.h in Headers */,
 				FA39FC8224D5911200EFF7CB /* GreyscaleLuminanceSource.h in Headers */,
 				FA39FC7624D5911200EFF7CB /* Detector.h in Headers */,
 				FA39FC8E24D5911200EFF7CB /* DetectorResult.h in Headers */,
@@ -1093,15 +1333,18 @@
 				FA39FCFD24D5911200EFF7CB /* NotFoundException.h in Headers */,
 				FA39FC9024D5911200EFF7CB /* JavaMath.h in Headers */,
 				FA39FCE524D5911200EFF7CB /* Code39Reader.h in Headers */,
+				FA39FDBC24D6766400EFF7CB /* pdf417.h in Headers */,
 				FA39FD3724D5938500EFF7CB /* NumberlikeArray.hh in Headers */,
 				FA39FCB624D5911200EFF7CB /* ErrorCorrection.h in Headers */,
 				FA39FC6E24D5911200EFF7CB /* ErrorCorrectionLevel.h in Headers */,
 				FA39FCC224D5911200EFF7CB /* LinesSampler.h in Headers */,
+				FA39FDB024D6766400EFF7CB /* decoder.h in Headers */,
 				FA39FC7224D5911200EFF7CB /* FinderPatternInfo.h in Headers */,
 				FA39FC9824D5911200EFF7CB /* BitSource.h in Headers */,
 				FA39FC7524D5911200EFF7CB /* FinderPattern.h in Headers */,
 				FA39FC6424D5911200EFF7CB /* BitMatrixParser.h in Headers */,
 				FA39FCBE24D5911200EFF7CB /* PDF417Reader.h in Headers */,
+				FA39FDB124D6766400EFF7CB /* window.h in Headers */,
 				FA39FC8024D5911200EFF7CB /* BitArray.h in Headers */,
 				FA39FB5124D590F300EFF7CB /* sber_code.h in Headers */,
 				FA39FCA924D5911200EFF7CB /* GenericGFPoly.h in Headers */,
@@ -1111,54 +1354,77 @@
 				FA39FC4D24D5911200EFF7CB /* MultiDetector.h in Headers */,
 				FA39FCC724D5911200EFF7CB /* LuminanceSource.h in Headers */,
 				FA39FCD524D5911200EFF7CB /* DetectorException.h in Headers */,
+				FA39FDC424D6766400EFF7CB /* code39.h in Headers */,
 				FA39FCEF24D5911200EFF7CB /* ITFReader.h in Headers */,
 				FA39FCC924D5911200EFF7CB /* Version.h in Headers */,
 				FA39FCDB24D5911200EFF7CB /* InvertedLuminanceSource.h in Headers */,
 				FA39FCDE24D5911200EFF7CB /* CodaBarReader.h in Headers */,
 				FA39FC3C24D5911200EFF7CB /* ResultPointCallback.h in Headers */,
 				FA39FCDD24D5911200EFF7CB /* EAN13Reader.h in Headers */,
+				FA39FDBE24D6766400EFF7CB /* code93.h in Headers */,
 				FA39FCB524D5911200EFF7CB /* Decoder.h in Headers */,
+				FA39FDCF24D6766400EFF7CB /* bch15_5.h in Headers */,
 				FA39FD3824D5938500EFF7CB /* BigIntegerUtils.hh in Headers */,
 				FA39FC5024D5911200EFF7CB /* GenericMultipleBarcodeReader.h in Headers */,
 				FA39FC4E24D5911200EFF7CB /* QRCodeMultiReader.h in Headers */,
 				FA39FCCE24D5911200EFF7CB /* BitMatrixParser.h in Headers */,
+				FA39FDDE24D6766400EFF7CB /* refcnt.h in Headers */,
+				FA39FDAC24D6766400EFF7CB /* config.h in Headers */,
 				FA39FD3A24D5938500EFF7CB /* BigUnsigned.hh in Headers */,
 				FA39FC5824D5911200EFF7CB /* AztecDetectorResult.h in Headers */,
+				FA39FDA724D6766400EFF7CB /* error.h in Headers */,
 				FA39FCFC24D5911200EFF7CB /* Exception.h in Headers */,
 				FA39FCEE24D5911200EFF7CB /* UPCEANReader.h in Headers */,
+				FA39FDD724D6766400EFF7CB /* qrcode.h in Headers */,
 				FA39FCC024D5911200EFF7CB /* Detector.h in Headers */,
 				FA39FC4624D5911200EFF7CB /* ByQuadrantReader.h in Headers */,
 				FA39FC7C24D5911200EFF7CB /* FormatInformation.h in Headers */,
+				FA39FDA924D6766400EFF7CB /* debug.h in Headers */,
+				FA39FDC524D6766400EFF7CB /* svg.h in Headers */,
 				FA39FCE124D5911200EFF7CB /* MultiFormatUPCEANReader.h in Headers */,
 				FA39FC5724D5911200EFF7CB /* Detector.h in Headers */,
 				FA39FCD924D5911200EFF7CB /* DataMatrixReader.h in Headers */,
+				FA39FDAE24D6766400EFF7CB /* event.h in Headers */,
 				FA39FD0024D5911200EFF7CB /* ResultPoint.h in Headers */,
 				FA39FCE624D5911200EFF7CB /* OneDResultPoint.h in Headers */,
 				FA39FCFE24D5911200EFF7CB /* MultiFormatReader.h in Headers */,
 				FA39FCFA24D5911200EFF7CB /* IllegalStateException.h in Headers */,
+				FA39FDD424D6766400EFF7CB /* img_scanner.h in Headers */,
 				FA39FCF124D5911200EFF7CB /* Code128Reader.h in Headers */,
 				FA39FC9D24D5911200EFF7CB /* DecoderResult.h in Headers */,
+				FA39FDC724D6766400EFF7CB /* zbar.h in Headers */,
+				FA39FDB624D6766400EFF7CB /* databar.h in Headers */,
 				FA39FC7924D5911200EFF7CB /* AlignmentPattern.h in Headers */,
+				FA39FDD024D6766400EFF7CB /* qrdec.h in Headers */,
 				FA39FCF924D5911200EFF7CB /* ZXing.h in Headers */,
 				FA39FC5C24D5911200EFF7CB /* ReaderException.h in Headers */,
+				FA39FDB524D6766400EFF7CB /* code128.h in Headers */,
+				FA39FDD524D6766400EFF7CB /* timer.h in Headers */,
 				FA39FC3D24D5911200EFF7CB /* ChecksumException.h in Headers */,
 				FA39FCAF24D5911200EFF7CB /* PerspectiveTransform.h in Headers */,
 				FA39FC9C24D5911200EFF7CB /* Str.h in Headers */,
 				FA39FC7424D5911200EFF7CB /* FinderPatternFinder.h in Headers */,
 				FA39FC6B24D5911200EFF7CB /* DecodedBitStreamParser.h in Headers */,
+				FA39FDBF24D6766400EFF7CB /* qr_finder.h in Headers */,
 				FA39FC3E24D5911200EFF7CB /* Reader.h in Headers */,
 				FA39FCED24D5911200EFF7CB /* OneDReader.h in Headers */,
 				FA39FC9424D5911200EFF7CB /* MathUtils.h in Headers */,
+				FA39FDDA24D6766400EFF7CB /* x.h in Headers */,
+				FA39FDCD24D6766400EFF7CB /* rs.h in Headers */,
+				FA39FDAD24D6766400EFF7CB /* symbol.h in Headers */,
+				FA39FDD124D6766400EFF7CB /* util.h in Headers */,
 				FA39FCEB24D5911200EFF7CB /* EAN8Reader.h in Headers */,
 				FA39FCEA24D5911200EFF7CB /* MultiFormatOneDReader.h in Headers */,
 				FA39FC9524D5911200EFF7CB /* MonochromeRectangleDetector.h in Headers */,
 				FA39FCAB24D5911200EFF7CB /* CharacterSetECI.h in Headers */,
+				FA39FDB824D6766400EFF7CB /* i25.h in Headers */,
 				FA39FC5E24D5911200EFF7CB /* Version.h in Headers */,
 				FA39FC8324D5911200EFF7CB /* Counted.h in Headers */,
 				FA39FC4424D5911200EFF7CB /* FormatException.h in Headers */,
 				FA39FC5124D5911200EFF7CB /* AztecReader.h in Headers */,
 				FA39FD3324D5938500EFF7CB /* BigIntegerAlgorithms.hh in Headers */,
 				FA39FC6124D5911200EFF7CB /* DataBlock.h in Headers */,
+				FA39FDBB24D6766400EFF7CB /* pdf417_hash.h in Headers */,
 				FA39FCD824D5911200EFF7CB /* Detector.h in Headers */,
 				FA39FC7A24D5911200EFF7CB /* AlignmentPatternFinder.h in Headers */,
 				FA39FD0124D5911200EFF7CB /* CodeData.hpp in Headers */,
@@ -1331,6 +1597,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA39FDC024D6766400EFF7CB /* code128.c in Sources */,
 				FA39FC6324D5911200EFF7CB /* DataBlock.cpp in Sources */,
 				FA39FC8424D5911200EFF7CB /* HybridBinarizer.cpp in Sources */,
 				FA39FC4F24D5911200EFF7CB /* GenericMultipleBarcodeReader.cpp in Sources */,
@@ -1339,8 +1606,10 @@
 				FA39FC3924D5911200EFF7CB /* CodeData.cpp in Sources */,
 				FA39FC5524D5911200EFF7CB /* Decoder.cpp in Sources */,
 				FA39FCA724D5911200EFF7CB /* ReedSolomonDecoder.cpp in Sources */,
+				FA39FDCA24D6766400EFF7CB /* bch15_5.c in Sources */,
 				FA39FCDA24D5911200EFF7CB /* DataMatrixReader.cpp in Sources */,
 				FA39FC8B24D5911200EFF7CB /* StringUtils.cpp in Sources */,
+				FA39FDBD24D6766400EFF7CB /* databar.c in Sources */,
 				FA39FCA024D5911200EFF7CB /* DecoderResult.cpp in Sources */,
 				FA39FCC824D5911200EFF7CB /* MultiFormatReader.cpp in Sources */,
 				FA39FC6D24D5911200EFF7CB /* QRCodeReader.cpp in Sources */,
@@ -1357,6 +1626,8 @@
 				FA39FCE024D5911200EFF7CB /* OneDReader.cpp in Sources */,
 				FA39FC6924D5911200EFF7CB /* Decoder.cpp in Sources */,
 				FA39FC3F24D5911200EFF7CB /* LuminanceSource.cpp in Sources */,
+				FA39FDDC24D6766400EFF7CB /* config.c in Sources */,
+				FA39FDBA24D6766400EFF7CB /* codabar.c in Sources */,
 				FA39FC9724D5911200EFF7CB /* BitArray.cpp in Sources */,
 				FA39FCB724D5911200EFF7CB /* ErrorCorrection.cpp in Sources */,
 				FA39FC8524D5911200EFF7CB /* BitMatrix.cpp in Sources */,
@@ -1366,6 +1637,7 @@
 				FA39FCD624D5911200EFF7CB /* CornerPoint.cpp in Sources */,
 				FA39FCCA24D5911200EFF7CB /* Version.cpp in Sources */,
 				FA39FC7324D5911200EFF7CB /* FinderPatternFinder.cpp in Sources */,
+				FA39FDA824D6766400EFF7CB /* img_scanner.c in Sources */,
 				FA39FCC524D5911200EFF7CB /* Reader.cpp in Sources */,
 				FA39FCDC24D5911200EFF7CB /* Result.cpp in Sources */,
 				FA39FC9A24D5911200EFF7CB /* BitArrayIO.cpp in Sources */,
@@ -1377,12 +1649,16 @@
 				FA39FC5F24D5911200EFF7CB /* Version.cpp in Sources */,
 				FA39FCD124D5911200EFF7CB /* Decoder.cpp in Sources */,
 				FA39FC9224D5911200EFF7CB /* MonochromeRectangleDetector.cpp in Sources */,
+				FA39FDDF24D6766400EFF7CB /* decoder.c in Sources */,
 				FA39FD3624D5938500EFF7CB /* BigIntegerAlgorithms.cc in Sources */,
 				FA39FC7724D5911200EFF7CB /* FinderPattern.cpp in Sources */,
 				FA39FCC324D5911200EFF7CB /* PDF417Reader.cpp in Sources */,
 				FA39FCE324D5911200EFF7CB /* UPCAReader.cpp in Sources */,
+				FA39FDC824D6766400EFF7CB /* qrdec.c in Sources */,
+				FA39FDC224D6766400EFF7CB /* qrdectxt.c in Sources */,
 				FA39FC4024D5911200EFF7CB /* InvertedLuminanceSource.cpp in Sources */,
 				FA39FC8724D5911200EFF7CB /* DetectorResult.cpp in Sources */,
+				FA39FDA624D6766400EFF7CB /* scanner.c in Sources */,
 				FA39FD3424D5938500EFF7CB /* BigUnsignedInABase.cc in Sources */,
 				FA39FC4724D5911200EFF7CB /* ByQuadrantReader.cpp in Sources */,
 				FA39FC4C24D5911200EFF7CB /* MultiDetector.cpp in Sources */,
@@ -1394,23 +1670,32 @@
 				FA39FCB824D5911200EFF7CB /* ModulusGF.cpp in Sources */,
 				FA39FC7024D5911200EFF7CB /* Detector.cpp in Sources */,
 				FA39FC9B24D5911200EFF7CB /* CharacterSetECI.cpp in Sources */,
+				FA39FDDB24D6766400EFF7CB /* symbol.c in Sources */,
 				FA39FCA524D5911200EFF7CB /* GenericGFPoly.cpp in Sources */,
 				FA39FCCF24D5911200EFF7CB /* BitMatrixParser.cpp in Sources */,
 				FA39FC8D24D5911200EFF7CB /* GlobalHistogramBinarizer.cpp in Sources */,
 				FA39FCE824D5911200EFF7CB /* EAN13Reader.cpp in Sources */,
 				FA39FC8924D5911200EFF7CB /* PerspectiveTransform.cpp in Sources */,
 				FA39FCA224D5911200EFF7CB /* GenericGF.cpp in Sources */,
+				FA39FDC124D6766400EFF7CB /* i25.c in Sources */,
+				FA39FDD324D6766400EFF7CB /* rs.c in Sources */,
+				FA39FDCE24D6766400EFF7CB /* binarize.c in Sources */,
 				FA39FD5B24D5AE7F00EFF7CB /* hungarian.cpp in Sources */,
 				FA39FCD424D5911200EFF7CB /* Detector.cpp in Sources */,
 				FA39FCF324D5911200EFF7CB /* CodaBarReader.cpp in Sources */,
 				FA39FC5624D5911200EFF7CB /* Detector.cpp in Sources */,
+				FA39FDD824D6766400EFF7CB /* error.c in Sources */,
 				FA39FCC424D5911200EFF7CB /* ResultIO.cpp in Sources */,
 				FA39FC8F24D5911200EFF7CB /* BitSource.cpp in Sources */,
+				FA39FDB324D6766400EFF7CB /* qr_finder.c in Sources */,
 				FA39FC6524D5911200EFF7CB /* BitMatrixParser.cpp in Sources */,
+				FA39FDCB24D6766400EFF7CB /* util.c in Sources */,
 				FA39FC4B24D5911200EFF7CB /* MultiFinderPatternFinder.cpp in Sources */,
+				FA39FDB424D6766400EFF7CB /* code93.c in Sources */,
 				FA39FCFF24D5911200EFF7CB /* BarcodeFormat.cpp in Sources */,
 				FA39FCBC24D5911200EFF7CB /* Decoder.cpp in Sources */,
 				FA39FC7124D5911200EFF7CB /* FinderPatternInfo.cpp in Sources */,
+				FA39FDC324D6766400EFF7CB /* ean.c in Sources */,
 				FA39FD3E24D5938500EFF7CB /* BigInteger.cc in Sources */,
 				FA39FCEC24D5911200EFF7CB /* MultiFormatUPCEANReader.cpp in Sources */,
 				FA39FCC124D5911200EFF7CB /* LinesSampler.cpp in Sources */,
@@ -1419,21 +1704,25 @@
 				FA39FCF524D5911200EFF7CB /* EAN8Reader.cpp in Sources */,
 				FA39FC6C24D5911200EFF7CB /* Mode.cpp in Sources */,
 				FA39FD3B24D5938500EFF7CB /* BigUnsigned.cc in Sources */,
+				FA39FDB924D6766400EFF7CB /* code39.c in Sources */,
 				FA39FCCC24D5911200EFF7CB /* DecodedBitStreamParser.cpp in Sources */,
 				FA39FCBF24D5911200EFF7CB /* Detector.cpp in Sources */,
 				FA39FCA324D5911200EFF7CB /* ReedSolomonException.cpp in Sources */,
+				FA39FDCC24D6766400EFF7CB /* isaac.c in Sources */,
 				FA39FC6A24D5911200EFF7CB /* DataMask.cpp in Sources */,
 				FA39FD3D24D5938500EFF7CB /* BigIntegerUtils.cc in Sources */,
 				FA39FCF824D5911200EFF7CB /* Code39Reader.cpp in Sources */,
 				FA39FC9F24D5911200EFF7CB /* GridSampler.cpp in Sources */,
 				FA39FC4324D5911200EFF7CB /* Exception.cpp in Sources */,
 				FA39FC9E24D5911200EFF7CB /* GreyscaleRotatedLuminanceSource.cpp in Sources */,
+				FA39FDAA24D6766400EFF7CB /* refcnt.c in Sources */,
 				FA39FC7E24D5911200EFF7CB /* ResultPointCallback.cpp in Sources */,
 				FA39FC3A24D5911200EFF7CB /* SberCodeAPI.cpp in Sources */,
 				FA39FCFB24D5911200EFF7CB /* FormatException.cpp in Sources */,
 				FA39FC5D24D5911200EFF7CB /* DecodeHints.cpp in Sources */,
 				FA39FC4824D5911200EFF7CB /* MultipleBarcodeReader.cpp in Sources */,
 				FA39FCDF24D5911200EFF7CB /* Code128Reader.cpp in Sources */,
+				FA39FDC624D6766400EFF7CB /* image.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,13 +12,13 @@
 #include <stdio.h>
 #include <opencv2/core.hpp>
 
-//namespace zbar {
-//    struct zbar_symbol_s;
-//    typedef struct zbar_symbol_s zbar_symbol_t;
-//
-//    struct zbar_symbol_set_s;
-//    typedef struct zbar_symbol_set_s zbar_symbol_set_t;
-//}; // namespace zbar
+namespace zbar {
+    struct zbar_symbol_s;
+    typedef struct zbar_symbol_s zbar_symbol_t;
+
+    struct zbar_symbol_set_s;
+    typedef struct zbar_symbol_set_s zbar_symbol_set_t;
+}; // namespace zbar
 
 namespace zxing {
     template<typename T> class Ref;
@@ -37,8 +37,8 @@ struct Code {
     int trackId;
     
     Code(){};
-//    Code(const zbar::zbar_symbol_t *);
-//    static std::vector<Code> parseResult(const zbar::zbar_symbol_set_t *);
+    Code(const zbar::zbar_symbol_t *);
+    static std::vector<Code> parseResult(const zbar::zbar_symbol_set_t *);
     static std::vector<Code> parseResult(const std::vector<zxing::Ref<zxing::Result>> &);
 };
 
