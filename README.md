@@ -31,4 +31,4 @@
 
 ## Контакты
 
-Telegram: graalex
+Telegram: [graalex](https://telegram.me/graalex)
