@@ -61,26 +61,6 @@
     return [super actionForKey:event];
 }
 
-//- (id<CAAction>)actionForKey:(NSString *)event {
-//    if ([event isEqualToString:@"path"]) {
-//        CABasicAnimation *bgAnim = (id)[super actionForKey:@"backgroundColor"];
-//        CABasicAnimation *anim = [CABasicAnimation animationWithKeyPath:@"path"];
-//
-//        anim.autoreverses = bgAnim.autoreverses;
-//        anim.beginTime = bgAnim.beginTime;
-//        anim.delegate = bgAnim.delegate;
-//        anim.duration = bgAnim.duration;
-//        anim.fillMode = bgAnim.fillMode;
-//        anim.repeatCount = bgAnim.repeatCount;
-//        anim.repeatDuration = bgAnim.repeatDuration;
-//        anim.speed = bgAnim.speed;
-//        anim.timingFunction = bgAnim.timingFunction;
-//        anim.timeOffset = bgAnim.timeOffset;
-//
-//        return anim;
-//    }
-//    return [super animationForKey:event];
-//}
 
 - (void)updatePoints:(std::vector<cv::Point>)points animated:(BOOL)animated {
     if (prevPoints.size() != 0 && points.size() == prevPoints.size()) {

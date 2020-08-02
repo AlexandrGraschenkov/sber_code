@@ -31,18 +31,18 @@ using namespace cv;
 using namespace std;
 
 const DecodeHints SBER_HINT(
-DecodeHints::QR_CODE_HINT |
+//DecodeHints::QR_CODE_HINT |
 DecodeHints::DATA_MATRIX_HINT |
-DecodeHints::AZTEC_HINT |
+DecodeHints::AZTEC_HINT //|
                             
-DecodeHints::CODE_39_HINT |
-DecodeHints::CODE_93_HINT |
-DecodeHints::CODE_128_HINT |
-DecodeHints::CODABAR_HINT |
-DecodeHints::UPC_A_HINT |
-DecodeHints::UPC_E_HINT |
-DecodeHints::EAN_13_HINT |
-DecodeHints::EAN_8_HINT
+//DecodeHints::CODE_39_HINT |
+//DecodeHints::CODE_93_HINT |
+//DecodeHints::CODE_128_HINT |
+//DecodeHints::CODABAR_HINT |
+//DecodeHints::UPC_A_HINT |
+//DecodeHints::UPC_E_HINT |
+//DecodeHints::EAN_13_HINT |
+//DecodeHints::EAN_8_HINT
 );
 
 namespace SberCode {
@@ -88,12 +88,6 @@ std::vector<Code> Recognizer::recognize(const cv::Mat &frame, ImageFormat format
         cvtColor(frame, grayImg, COLOR_RGB2GRAY);
     }
     
-//    threshold(tempImg, grayImg, 0, 255, THRESH_OTSU);
-//    grayImg = tempImg;
-//    clahe->apply(tempImg, grayImg);
-//    imshow("orig", tempImg);
-//    imshow("contrast", grayImg);
-    
     
     vector<Code> result;
     
@@ -107,7 +101,6 @@ std::vector<Code> Recognizer::recognize(const cv::Mat &frame, ImageFormat format
     const zbar_symbol_set_t *symSet = zbar_image_scanner_get_results(zScanner);
     result = Code::parseResult(symSet);
 #endif
-    cout << result.size() << endl;
     
     // ZXING
     ArrayRef<char> dataRef((char *)grayImg.data, grayImg.size().area());
@@ -121,45 +114,59 @@ std::vector<Code> Recognizer::recognize(const cv::Mat &frame, ImageFormat format
     DecodeHints hints(SBER_HINT);
     vector<Ref<Result>> zxingResults;
     try {
-//        zxingResults = reader.decodeMultiple(bitmap, hints);
+        zxingResults = reader.decodeMultiple(bitmap, hints);
     } catch (std::exception exp) {
         cout << "Some err" << endl;
     }
     vector<Code> result2 = Code::parseResult(zxingResults);
+    
+    
+    // Merge results and filter
     if (result2.size()) {
-//        result.insert(result.end(), result2.begin(), result2.end());
+        result.insert(result.end(), result2.begin(), result2.end());
     }
     
-//    filterResult(result);
+    filterResult(result);
     double currTime = getTimestamp();
     for (Code &c : result) {
         c.detectTime = currTime;
     }
     
+    
     if (tracking) {
         doTrack(result);
-    }
-    
-    
-    if (result.size()) {
-        Rect r = cv::boundingRect(result[0].location);
-        cout << result.size() << result[0].message << " Rect " << r.x << " " << r.y << " " << r.width << " " << r.height << endl;
     }
     
     return result;
 }
 
 
-Point2f getCenter(const std::vector<Point> &vec) {
+Point getCenter(const std::vector<Point> &vec) {
     if (vec.size() == 0) {
         return {};
     }
-    Point center = {};
+    Point center(0, 0);
     for (Point p : vec) {
         center += p;
     }
     center = center / (int)vec.size();
     return center;
+}
+
+bool isPointInsidePolygon(Point p, const vector<Point> &poly) {
+    return pointPolygonTest(poly, p, false) > 0;
+//    if (poly.size() < 3) {
+//        return false;
+//    }
+//
+//    vector<Point2f> polyf;
+//    for (Point pp : poly) {
+//        polyf.push_back(pp);
+//    }
+//
+//    Point2f pf = p;
+//    double dist = pointPolygonTest(polyf, pf, false);
+//    return dist > 1;
 }
 
 void Recognizer::filterResult(std::vector<Code> &recognizedCodes) {
@@ -174,11 +181,11 @@ void Recognizer::filterResult(std::vector<Code> &recognizedCodes) {
     
     // remove dublicates
     for (int i = 0; i < recognizedCodes.size(); i++) {
-        for (int j = i+1; j < recognizedCodes.size(); i++) {
+        for (int j = i+1; j < recognizedCodes.size(); j++) {
             Point c1 = getCenter(recognizedCodes[i].location);
             Point c2 = getCenter(recognizedCodes[j].location);
-            double d1 = pointPolygonTest(recognizedCodes[i].location, c2, false);
-            double d2 = pointPolygonTest(recognizedCodes[j].location, c1, false);
+            double d1 = isPointInsidePolygon(c2, recognizedCodes[i].location);
+            double d2 = isPointInsidePolygon(c1, recognizedCodes[j].location);
             if (max(d1, d2) > 0) {
                 recognizedCodes.erase(recognizedCodes.begin() + j);
                 j--;

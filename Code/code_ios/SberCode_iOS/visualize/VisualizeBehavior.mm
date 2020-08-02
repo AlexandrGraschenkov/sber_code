@@ -52,7 +52,7 @@
             DisplayTrackPoly *poly = polygons[polyIdx];
             if (poly.trackId == c.trackId) {
                 founded = true;
-                bool animate = (poly.missCount < 35);
+                bool animate = (poly.missCount < 30);
                 poly.missCount = 0;
                 
                 [poly updatePoints:points animated:animate];
@@ -80,7 +80,7 @@
         if ([updatedPolygons containsObject:@(polyIdx)]) continue;
         DisplayTrackPoly *poly = polygons[polyIdx];
         poly.missCount++;
-        if (poly.missCount > 24 && poly.opacity != 0) poly.opacity = 0;
+        if (poly.missCount > 21 && poly.opacity != 0) poly.opacity = 0;
         
         if (abs(poly.lastUpdateTime - currTime) > 5.0) {
             [poly removeFromSuperlayer];

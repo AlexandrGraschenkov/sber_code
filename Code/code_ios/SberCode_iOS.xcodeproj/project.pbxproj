@@ -300,6 +300,8 @@
 		FA39FDDF24D6766400EFF7CB /* decoder.c in Sources */ = {isa = PBXBuildFile; fileRef = FA39FDA324D6766400EFF7CB /* decoder.c */; };
 		FA39FDE024D6766400EFF7CB /* mutex.h in Headers */ = {isa = PBXBuildFile; fileRef = FA39FDA424D6766400EFF7CB /* mutex.h */; };
 		FA39FDE124D6766400EFF7CB /* image.h in Headers */ = {isa = PBXBuildFile; fileRef = FA39FDA524D6766400EFF7CB /* image.h */; };
+		FA39FDE524D6A55A00EFF7CB /* CodeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA39FDE424D6A55A00EFF7CB /* CodeCell.m */; };
+		FA39FDE824D6A89100EFF7CB /* CodeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FA39FDE724D6A89100EFF7CB /* CodeModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -633,6 +635,10 @@
 		FA39FDA324D6766400EFF7CB /* decoder.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = decoder.c; sourceTree = "<group>"; };
 		FA39FDA424D6766400EFF7CB /* mutex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mutex.h; sourceTree = "<group>"; };
 		FA39FDA524D6766400EFF7CB /* image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = image.h; sourceTree = "<group>"; };
+		FA39FDE324D6A55A00EFF7CB /* CodeCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CodeCell.h; sourceTree = "<group>"; };
+		FA39FDE424D6A55A00EFF7CB /* CodeCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CodeCell.m; sourceTree = "<group>"; };
+		FA39FDE624D6A89100EFF7CB /* CodeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CodeModel.h; sourceTree = "<group>"; };
+		FA39FDE724D6A89100EFF7CB /* CodeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CodeModel.m; sourceTree = "<group>"; };
 		FB8F65BDD2E84831F8910EA9 /* Pods-SberCode_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SberCode_iOS.debug.xcconfig"; path = "Target Support Files/Pods-SberCode_iOS/Pods-SberCode_iOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -706,8 +712,7 @@
 				FA39FB3024D590BE00EFF7CB /* AppDelegate.m */,
 				FA39FB3224D590BE00EFF7CB /* SceneDelegate.h */,
 				FA39FB3324D590BE00EFF7CB /* SceneDelegate.m */,
-				FA39FB3524D590BE00EFF7CB /* ViewController.h */,
-				FA39FD4524D596DA00EFF7CB /* ViewController.mm */,
+				FA39FDE224D6A53C00EFF7CB /* main_vc */,
 				FA39FD5D24D5B26400EFF7CB /* visualize */,
 				FA39FD4724D5982D00EFF7CB /* utlis */,
 				FA39FD4424D596AA00EFF7CB /* objc_wrapper */,
@@ -1271,6 +1276,19 @@
 			path = window;
 			sourceTree = "<group>";
 		};
+		FA39FDE224D6A53C00EFF7CB /* main_vc */ = {
+			isa = PBXGroup;
+			children = (
+				FA39FB3524D590BE00EFF7CB /* ViewController.h */,
+				FA39FD4524D596DA00EFF7CB /* ViewController.mm */,
+				FA39FDE624D6A89100EFF7CB /* CodeModel.h */,
+				FA39FDE724D6A89100EFF7CB /* CodeModel.m */,
+				FA39FDE324D6A55A00EFF7CB /* CodeCell.h */,
+				FA39FDE424D6A55A00EFF7CB /* CodeCell.m */,
+			);
+			path = main_vc;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -1585,9 +1603,11 @@
 				FA39FD4D24D5988400EFF7CB /* UIView+Mat.mm in Sources */,
 				FA39FD6024D5B28F00EFF7CB /* VisualizeBehavior.mm in Sources */,
 				FA39FB4224D590C100EFF7CB /* main.m in Sources */,
+				FA39FDE524D6A55A00EFF7CB /* CodeCell.m in Sources */,
 				FA39FD4624D596DA00EFF7CB /* ViewController.mm in Sources */,
 				FA39FD4A24D5982D00EFF7CB /* fps.cpp in Sources */,
 				FA39FB3424D590BE00EFF7CB /* SceneDelegate.m in Sources */,
+				FA39FDE824D6A89100EFF7CB /* CodeModel.m in Sources */,
 				FA39FD6324D5B46D00EFF7CB /* DisplayTrackPoly.mm in Sources */,
 				FA39FD4324D596A600EFF7CB /* Camera.mm in Sources */,
 			);
