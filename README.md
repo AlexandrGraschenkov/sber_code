@@ -10,6 +10,25 @@
 
 Библиотке написана на `C++`. Используются библиоткеки [zxing](https://github.com/nu-book/zxing-cpp) и [zbar](https://github.com/ZBar/ZBar).
 
+## Поддержка форматов
+
+### Линейные
+
+- [x] Codabar
+- [ ] Code 11
+- [ ] Code 25
+- [x] Code 39
+- [x] Code 93
+- [x] Code 128
+- [x] EAN
+- [x] UPC
+
+### Двухмерные
+
+- [x] QR
+- [x] DataMatrix
+- [x] Aztec
+
 ## Контакты
 
-Telegram: graalex
+Telegram: [graalex](https://telegram.me/graalex)
