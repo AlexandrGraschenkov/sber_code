@@ -95,6 +95,16 @@
     });
 }
 
+- (NSString *)fixEncoding:(NSString *)str {
+    return str;
+//    if ([str hasPrefix:@"ST00011"]) {
+//        NSData *dt = [str dataUsingEncoding:NSUTF8StringEncoding];
+//        str = [[NSString alloc] initWithData:dt encoding:NSWindowsCP1251StringEncoding];
+//        return str;
+//    }
+//    return str;
+}
+
 - (void)updateTableNewCodes:(const std::vector<SberCode::Code> &)codes {
     if (codes.size() == 0) return;
     BOOL changes = false;
@@ -103,6 +113,7 @@
         CodeModel *code = [CodeModel new];
         code.typeName = [NSString stringWithUTF8String:c.typeName.c_str()];
         code.message = [NSString stringWithUTF8String:c.message.c_str()];
+        code.message = [self fixEncoding:code.message];
         
         NSUInteger idx = [foundedCodes indexOfObject:code];
         if (idx == 0) {

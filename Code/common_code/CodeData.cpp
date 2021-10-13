@@ -15,6 +15,11 @@
 #include <opencv2/imgproc.hpp>
 #include <zxing/Result.h>
 #include <zxing/BarcodeFormat.h>
+#include <iconv.h>
+#include <unordered_map>
+#include <stdio.h>
+#include <wchar.h>
+#include <string.h>
 
 #ifdef USE_ZBAR
 using namespace zbar;

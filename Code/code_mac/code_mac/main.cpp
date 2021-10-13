@@ -58,14 +58,14 @@ int main(int argc, const char * argv[]) {
 //    string imgPath = "/Users/alex/Downloads/sber_code_data/code-128_0.jpeg";
 //    string imgPath = "/Users/alex/Downloads/photo_2020-07-31 15.43.35.jpeg";
 //string imgPath = "/Users/alex/Downloads/sber_code_data/data_matrix.jpeg";
-string imgPath = "/Users/alex/Desktop/Снимок экрана 2020-08-01 в 23.36.14.png";
+string imgPath = "/Users/alex/Downloads/Штрихкоды/Тест/QR_win1251_02.png";
     
     Mat img = imread(imgPath);
     
     Recognizer rec;
     
     vector<string> checkImages;
-//    glob("/Users/alex/Downloads/Штрихкоды/Тест/*.png", checkImages, false);
+    glob("/Users/alex/Downloads/Штрихкоды/Тест/*.png", checkImages, false);
     checkImages.insert(checkImages.begin(), imgPath);
     for (string imgPath : checkImages) {
         cout << imgPath << endl;

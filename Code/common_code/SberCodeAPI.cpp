@@ -60,8 +60,8 @@ Recognizer::Recognizer() {
     zScanner = zbar_image_scanner_create();
     zImage = zbar_image_create();
 
-    zbar_image_scanner_set_config(zScanner, ZBAR_NONE, ZBAR_CFG_X_DENSITY, 3);
-    zbar_image_scanner_set_config(zScanner, ZBAR_NONE, ZBAR_CFG_Y_DENSITY, 3);
+    zbar_image_scanner_set_config(zScanner, ZBAR_NONE, ZBAR_CFG_X_DENSITY, 2);
+    zbar_image_scanner_set_config(zScanner, ZBAR_NONE, ZBAR_CFG_Y_DENSITY, 2);
     zbar_image_scanner_enable_cache(zScanner, true);
 #endif
     
